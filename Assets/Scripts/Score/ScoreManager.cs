@@ -25,6 +25,7 @@ public class ScoreManager : MonoBehaviour
     {
         _currentCachet = totalCachet;
         UpdateCachetText(_currentCachet);
+        CheckWorldViability();
     }
     public void UpdateCachetText(float cachet)
     {
@@ -40,15 +41,21 @@ public class ScoreManager : MonoBehaviour
     [ContextMenu("OnMoneyAdded")]
     public void DebugOnMoneyAdded()
     {
-        _currentMoney += 10;
-        UpdateMoneyText(_currentMoney);
+        OnMoneyAdded(10);
     }
 
     [ContextMenu("OnCachetUpdated")]
     public void DebugOnCachetUpdated()
     {
-        _currentCachet += 10;
-        UpdateCachetText(_currentCachet);
+        OnCachetUpdated(_currentCachet + 100);
+    }
+
+    private void CheckWorldViability()
+    {
+        if (_currentCachet >= 1000)
+        {
+            GameManager.Instance.EndGame(true);
+        }
     }
     #endregion Debug
 }
