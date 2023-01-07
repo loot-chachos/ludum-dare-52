@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FertilizerDegradationPercent: 10
   KillDegradationPercent: 10
-  TintedMaxSpeedPercentPerSeconds: 10
+  TintedMaxSpeedPercentPerSeconds: 100
   TintedFilter: {fileID: 7278306070544871908, guid: 66aa4e47ed8f7664c8c592f7eeb1f32a, type: 3}
   ColorGradient:
     serializedVersion: 2

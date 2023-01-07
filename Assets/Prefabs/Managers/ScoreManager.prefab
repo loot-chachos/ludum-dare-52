@@ -286,6 +286,9 @@ MonoBehaviour:
   _currentMoney: 0
   _cachetText: {fileID: 1685072984540231123}
   _moneyText: {fileID: 6507640468446105090}
+  _updateIterations: 20
+  _moneyScoreUpdateSpeedNumberPerSeconds: 25
+  _cachetScoreUpdateSpeedNumberPerSeconds: 100
 --- !u!1 &8795304117259902571
 GameObject:
   m_ObjectHideFlags: 0

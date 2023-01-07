@@ -12,29 +12,35 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _cachetText = null;
     [SerializeField] private TextMeshProUGUI _moneyText = null;
 
+    [SerializeField] private int _updateIterations = 20;
+    [SerializeField] private float _moneyScoreUpdateSpeedNumberPerSeconds = 25.0f;
+    [SerializeField] private float _cachetScoreUpdateSpeedNumberPerSeconds = 25.0f;
+
     public float CurrentCachet { get => _currentCachet; }
     public float CurrentMoney { get => _currentMoney;}
 
+    private Coroutine _moneyScoreCoroutine = null;
+    private Coroutine _cachetScoreCoroutine = null;
+
     public void OnMoneyAdded(float money)
     {
+        if (_moneyScoreCoroutine != null)
+        {
+            StopCoroutine(_moneyScoreCoroutine);
+        }
+        _moneyScoreCoroutine = StartCoroutine(MoneyScoreUpdater(_currentMoney, _currentMoney + money));
         _currentMoney += money;
-        UpdateMoneyText(_currentMoney);
     }
 
     public void OnCachetUpdated(float totalCachet)
     {
+        if (_cachetScoreCoroutine != null)
+        {
+            StopCoroutine(_cachetScoreCoroutine);
+        }
+        _cachetScoreCoroutine = StartCoroutine(CachetScoreUpdater(_currentCachet, totalCachet));
         _currentCachet = totalCachet;
-        UpdateCachetText(_currentCachet);
         CheckWorldViability();
-    }
-    public void UpdateCachetText(float cachet)
-    {
-        _cachetText.text = "Cachet : " + cachet.ToString("0000");
-    }
-
-    public void UpdateMoneyText(float cachet)
-    {
-        _moneyText.text = "Money : " + cachet.ToString("0000");
     }
 
     #region Debug
@@ -56,6 +62,26 @@ public class ScoreManager : MonoBehaviour
         {
             GameManager.Instance.EndGame(true);
         }
+    }
+
+    private IEnumerator MoneyScoreUpdater(float startValue, float endValue)
+    {
+        for (float i = startValue; i < endValue; i+= _moneyScoreUpdateSpeedNumberPerSeconds / _updateIterations)
+        {
+            _moneyText.text = $"Money : {i:0000}";
+            yield return new WaitForSeconds(1.0f/ _updateIterations);
+        }
+        _moneyText.text = $"Money : {endValue:0000}";
+    }
+
+    private IEnumerator CachetScoreUpdater(float startValue, float endValue)
+    {
+        for (float i = startValue; i < endValue; i += _cachetScoreUpdateSpeedNumberPerSeconds / _updateIterations)
+        {
+            _cachetText.text = $"Cachet : {i:0000}";
+            yield return new WaitForSeconds(1.0f/ _updateIterations);
+        }
+        _cachetText.text = $"Cachet : {endValue:0000}";
     }
     #endregion Debug
 }
