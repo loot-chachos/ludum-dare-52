@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _menuManager: {fileID: 8154452333888401160}
+  _gardenSettings: {fileID: 11400000, guid: 739c82b054e4b5f44b661f5c50164ced, type: 2}
   _scoreManager: {fileID: 8122893959497476784}
   _worldEvolutionManager: {fileID: 1123963615}
 --- !u!1001 &5135969063399729488

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,11 +7,11 @@ public class Plant : ScriptableObject
 {
     #region Settings
     [SerializeField] private string _name = string.Empty;
-    [SerializeField] private List<PlantEvolution> _stateSprite = new List<PlantEvolution>();
+    [SerializeField] private List<PlantEvolution> _evolutions = new List<PlantEvolution>();
     [SerializeField] private float _growSpeed = 1.0f;
 
     public string Name => _name;
-    public List<PlantEvolution> StateSprite => _stateSprite;
+    public List<PlantEvolution> Evolutions => _evolutions;
     public float GrowSpeed => _growSpeed;
     #endregion Settings
 
@@ -21,6 +22,7 @@ public class Plant : ScriptableObject
     public int HarvestCount { get; internal set; }
     public int FertilizeCount { get; internal set; }
     public int StoleByAnimalsCount { get; internal set; }
+    public PlantEvolution CurrentEvolution => _evolutions[(int)(State)];
     #endregion Runtime variables
 
     public Plant()
@@ -31,5 +33,19 @@ public class Plant : ScriptableObject
         FertilizeCount = 0;
         HarvestCount = 0;
         StoleByAnimalsCount = 0;
+    }
+
+    public bool CanEvolve()
+    {
+        PlantEvolution nextEvolution = _evolutions[(int)(State) + 1];
+        return nextEvolution.TimeReachBeforeEvolve <= TimeSpentAlive
+            && nextEvolution.WateredNeedToEvolve <= WateredCount
+            && nextEvolution.StolenCountToEvolve <= StoleByAnimalsCount;
+    }
+
+    public void Evolve()
+    {
+        State += 1;
+        // TODO: switch sprite at least.
     }
 }

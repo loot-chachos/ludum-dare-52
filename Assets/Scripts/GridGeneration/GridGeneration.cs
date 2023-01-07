@@ -1,35 +1,8 @@
 using UnityEngine;
 
-public class GridGeneration : MonoBehaviour
+public static class GridGeneration
 {
-    private enum GenerationDirection
-    {
-        NorthEast,
-        NorthWest,
-        SouthEast,
-        SouthWest,
-    }
-
-    [SerializeField] private GameObject _tilePrefab = null;
-    [SerializeField] private Vector2 _gridSize = new Vector2(5, 5);
-    [SerializeField] private Vector2 _cropPadding = new Vector2(1, 1);
-    [SerializeField] private GenerationDirection _generatonDirection = GenerationDirection.NorthEast;
-
-    private CropCell[] _crops = null;
-
-    void Start()
-    {
-        Vector2 startingPos = transform.position;
-        _crops = InitializeGrid(
-            _generatonDirection,
-            _tilePrefab,
-            _gridSize,
-            startingPos, 
-            _cropPadding,
-            transform);
-    }
-
-    private static CropCell[] InitializeGrid(GenerationDirection generatonDirection, GameObject prefab, Vector2 gridSize, Vector2 start, Vector2 padding, Transform parent)
+    public static CropCell[] InitializeGrid(GenerationDirection generatonDirection, GameObject prefab, Vector2 gridSize, Vector2 start, Vector2 padding, Transform parent)
     {
         int arraySize = (int)(gridSize.x * gridSize.y);
         CropCell[] crops = new CropCell[arraySize];
@@ -44,7 +17,7 @@ public class GridGeneration : MonoBehaviour
         {
             for (int i = 0; i < gridSize.x; i++)
             {
-                GameObject currentCrop = Instantiate(prefab, new Vector3(start.x + j * paddingX, start.y + i * paddingY), Quaternion.identity, parent);
+                GameObject currentCrop = GameObject.Instantiate(prefab, new Vector3(start.x + j * paddingX, start.y + i * paddingY), Quaternion.identity, parent);
                 int index = (j % (int)gridSize.x) + i;
                 crops[index] = currentCrop.GetComponent<CropCell>();
             }
@@ -63,11 +36,5 @@ public class GridGeneration : MonoBehaviour
             case GenerationDirection.SouthWest: return new Vector2(-1, -1);
             default: return new Vector2(1, 1);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

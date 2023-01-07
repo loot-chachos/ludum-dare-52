@@ -40,6 +40,20 @@ public class CropCell : MonoBehaviour
         }
     }
 
+    private Action<PlantState, PlantEvolution> _plantEvolved = null;
+    public event Action<PlantState, PlantEvolution> PlantEvolved
+    {
+        add
+        {
+            _plantEvolved -= value;
+            _plantEvolved += value;
+        }
+        remove
+        {
+            _plantEvolved -= value;
+        }
+    }
+
     private Action _isBury = null;
     public event Action IsBury
     {
@@ -90,6 +104,29 @@ public class CropCell : MonoBehaviour
         _state = CropState.blank;
     }
 
+    public void UpdateCrop(float additionalTime)
+    {
+        if (_state == CropState.blank || _state == CropState.dead)
+        {
+#if UNITY_EDITOR
+            //UnityEngine.Debug.Log("Crop is either blank or dead. Do not update.");
+#endif // UNITY_EDITOR
+            return;
+        }
+
+        _hostedPlant.TimeSpentAlive += additionalTime;
+
+        if (_hostedPlant.CanEvolve())
+        {
+            _hostedPlant.Evolve();
+            if (_plantEvolved != null)
+            {
+                // Send the current state which is new
+                _plantEvolved(_hostedPlant.State, _hostedPlant.CurrentEvolution);
+            }
+        }
+    }
+
     /// <summary>
     /// When the crop begin to host a plant. Should be automatic
     /// </summary>
@@ -115,7 +152,6 @@ public class CropCell : MonoBehaviour
     }
     #endregion Lifecycle
 
-
     #region Peaceful gameplay
     public void Watered()
     {
@@ -137,7 +173,6 @@ public class CropCell : MonoBehaviour
         }
     }
     #endregion Peaceful gameplay
-
 
     #region Speed run gameplay
     public void Harvest()

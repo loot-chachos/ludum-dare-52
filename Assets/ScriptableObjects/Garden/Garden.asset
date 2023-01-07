@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 930b563a77149f9448ade1640af6d839, type: 3}
+  m_Name: Garden
+  m_EditorClassIdentifier: 
+  _tilePrefab: {fileID: 5812976468972463041, guid: 0edc46930e8cbd948b678164bfca63e4, type: 3}
+  _gridSize: {x: 5, y: 5}
+  _cropPadding: {x: 1, y: 1}
+  _startingPos: {x: 0, y: 0}
+  _generatonDirection: 0
+  _updateFrequencyInSeconds: 1
+  _availablePlants:
+  - {fileID: 11400000, guid: aca6e4c888ceea24bbd5cec8c0e5ac91, type: 2}
+  - {fileID: 11400000, guid: 8e58902aaec304043af5e7d2ace561b3, type: 2}
