@@ -11,7 +11,9 @@ public class CropCell : MonoBehaviour
     #endregion Fields
 
     public float TimeAlive => _hostedPlant.TimeSpentAlive;
-    
+
+    public Plant HostedPlant { get => _hostedPlant;}
+
     #region Events
     private Action _isWatered = null;
     public event Action IsWatered {

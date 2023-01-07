@@ -12,6 +12,8 @@ public class WorldEvolutionManager : MonoBehaviour
 
     [SerializeField] private WorldEvolutionParameters _parameters = null;
 
+    public float CurrentWorldEvolutionPercent { get => _currentWorldEvolutionPercent; }
+
     private void Start()
     {
         _filterObject = Instantiate(_parameters.TintedFilter, transform);

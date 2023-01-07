@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Grid
@@ -145,5 +146,31 @@ public class Grid
                 _currentTimer = 0.0f;
             }
         }
+    }
+
+    public CropCell FindRandomCropOfState(PlantState plantState)
+    {
+        List<CropCell> possibleCells = new List<CropCell>();
+        foreach (CropCell crop in _crops)
+        {
+            if (crop?.HostedPlant != null && crop.HostedPlant.State == plantState)
+            {
+                possibleCells.Add(crop);
+            }
+        }
+        return possibleCells[UnityEngine.Random.Range(0, possibleCells.Count)];
+    }
+
+    public CropCell FindRandomCropAtLeastState(PlantState plantState)
+    {
+        List<CropCell> possibleCells = new List<CropCell>();
+        foreach (CropCell crop in _crops)
+        {
+            if (crop?.HostedPlant != null && crop.HostedPlant.State >= plantState)
+            {
+                possibleCells.Add(crop);
+            }
+        }
+        return possibleCells[UnityEngine.Random.Range(0, possibleCells.Count)];
     }
 }

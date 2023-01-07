@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public ScoreManager ScoreManager { get => _scoreManager; }
     public MenuManager MenuManager { get => _menuManager; }
     public bool HasStarted { get => _isPlaying; }
+    public Grid Grid { get => _grid;}
 
     void Awake()
     {
