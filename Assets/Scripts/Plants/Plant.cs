@@ -3,16 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/NewPlant", order = 1)]
-public class Plant : ScriptableObject
+[Serializable]
+public class Plant
 {
     #region Settings
-    [SerializeField] private string _name = string.Empty;
-    [SerializeField] private List<PlantEvolution> _evolutions = new List<PlantEvolution>();
-    [SerializeField] private float _growSpeed = 1.0f;
-
-    public string Name => _name;
-    public List<PlantEvolution> Evolutions => _evolutions;
-    public float GrowSpeed => _growSpeed;
+    [SerializeField] private PlantParameters _parameters = null;
     #endregion Settings
 
     #region Runtime variables
@@ -22,7 +17,8 @@ public class Plant : ScriptableObject
     public int HarvestCount { get; internal set; }
     public int FertilizeCount { get; internal set; }
     public int StoleByAnimalsCount { get; internal set; }
-    public PlantEvolution CurrentEvolution => _evolutions[(int)(State)];
+    public PlantEvolution CurrentEvolution => _parameters.Evolutions[(int)(State)];
+    public SpriteRenderer PlantSpriteRenderer { get; internal set; }
     #endregion Runtime variables
 
     public Plant()
@@ -37,7 +33,7 @@ public class Plant : ScriptableObject
 
     public bool CanEvolve()
     {
-        PlantEvolution nextEvolution = _evolutions[(int)(State) + 1];
+        PlantEvolution nextEvolution = _parameters.Evolutions[(int)(State) + 1];
         return nextEvolution.TimeReachBeforeEvolve <= TimeSpentAlive
             && nextEvolution.WateredNeedToEvolve <= WateredCount
             && nextEvolution.StolenCountToEvolve <= StoleByAnimalsCount;
@@ -47,5 +43,15 @@ public class Plant : ScriptableObject
     {
         State += 1;
         // TODO: switch sprite at least.
+    }
+
+    public void UpdateSprite()
+    {
+        PlantSpriteRenderer.sprite = CurrentEvolution.Visual;
+    }
+
+    public void UpdateSpriteOnEvo(PlantState state = PlantState.Underground, PlantEvolution evo = null)
+    {
+        UpdateSprite();
     }
 }

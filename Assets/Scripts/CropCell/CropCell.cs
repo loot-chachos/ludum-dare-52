@@ -8,6 +8,12 @@ public class CropCell : MonoBehaviour
     #region Fields
     [SerializeField] private Plant _hostedPlant = null;
     [SerializeField] private CropState _state = CropState.blank;
+    [SerializeField] private SpriteRenderer _soilSpriteRenderer;
+    [SerializeField] private SpriteRenderer _plantSpriteRenderer;
+
+    [SerializeField] private Sprite _blankSprite = null;
+    [SerializeField] private Sprite _fertileSprite = null;
+    [SerializeField] private Sprite _deadSprite = null;
     #endregion Fields
 
     public float TimeAlive => _hostedPlant.TimeSpentAlive;
@@ -103,7 +109,11 @@ public class CropCell : MonoBehaviour
     public CropCell()
     {
         _hostedPlant = null;
-        _state = CropState.blank;
+    }
+
+    private void Awake()
+    {
+        UpdateCropState(CropState.blank);
     }
 
     public void UpdateCrop(float additionalTime)
@@ -135,9 +145,9 @@ public class CropCell : MonoBehaviour
     /// <param name="plant"></param>
     public void Bury(Plant plant)
     {
-        _state = CropState.fertile;
+        UpdateCropState(CropState.fertile);
         _hostedPlant = plant;
-
+        RegisterPlant();
         if (_isBury != null)
         {
             _isBury();
@@ -149,8 +159,9 @@ public class CropCell : MonoBehaviour
     /// </summary>
     public void Kill()
     {
+        UnRegisterPlant();
         _hostedPlant = null;
-        _state = CropState.dead;
+        UpdateCropState(CropState.dead);
     }
     #endregion Lifecycle
 
@@ -179,6 +190,7 @@ public class CropCell : MonoBehaviour
     #region Speed run gameplay
     public void Harvest()
     {
+        UnRegisterPlant();
         _hostedPlant = null;
         _hostedPlant.TimeSpentAlive = 0.0F;
         _hostedPlant.HarvestCount++;
@@ -200,6 +212,43 @@ public class CropCell : MonoBehaviour
             _isFertilize();
         }
     }
-
     #endregion Speed run gameplay
+
+    public void UpdateCropState(CropState state)
+    {
+        _state = state;
+        switch (state)
+        {
+            case CropState.blank:
+                {
+                    _plantSpriteRenderer.sprite = null;
+                    _soilSpriteRenderer.sprite = _deadSprite;
+                }
+                break;
+            case CropState.fertile:
+                {
+                    _soilSpriteRenderer.sprite = _fertileSprite;
+                }
+                break;
+            case CropState.dead:
+                {
+                    _plantSpriteRenderer.sprite = null;
+                    _soilSpriteRenderer.sprite = _deadSprite;
+                }
+                break;
+        }
+    }
+
+    private void RegisterPlant()
+    {
+        _hostedPlant.PlantSpriteRenderer = _plantSpriteRenderer;
+        IsBury += _hostedPlant.UpdateSprite;
+        PlantEvolved += _hostedPlant.UpdateSpriteOnEvo;
+    }
+
+    private void UnRegisterPlant()
+    {
+        IsBury -= _hostedPlant.UpdateSprite;
+        PlantEvolved -= _hostedPlant.UpdateSpriteOnEvo;
+    }
 }

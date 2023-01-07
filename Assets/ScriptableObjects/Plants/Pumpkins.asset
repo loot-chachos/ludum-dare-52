@@ -9,12 +9,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33fe3ec8d3d3ff44389b785dfa2fba64, type: 3}
+  m_Script: {fileID: 11500000, guid: a2c0099cd80eff64e8997b31077ca744, type: 3}
   m_Name: Pumpkins
   m_EditorClassIdentifier: 
-  _name: Pumpkins
-  _stateSprite:
-  - _visual: {fileID: -472828399, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
-    _cachetGiven: 0
-    _scoreGivenWhenHarvest: 0
+  _name: 
+  _evolutions:
+  - _visual: {fileID: 2062366748, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+    _cachetGiven: 10
+    _scoreGivenWhenHarvest: 10
+    _timeReachBeforeEvolve: 10
+    _wateredNeedToEvolve: 0
+    _stolenCountToEvolve: 0
+  - _visual: {fileID: -1894259798, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+    _cachetGiven: 10
+    _scoreGivenWhenHarvest: 10
+    _timeReachBeforeEvolve: 10
+    _wateredNeedToEvolve: 0
+    _stolenCountToEvolve: 0
+  - _visual: {fileID: -1991533749, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+    _cachetGiven: 10
+    _scoreGivenWhenHarvest: 10
+    _timeReachBeforeEvolve: 10
+    _wateredNeedToEvolve: 0
+    _stolenCountToEvolve: 0
   _growSpeed: 1

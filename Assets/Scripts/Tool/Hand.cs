@@ -25,7 +25,7 @@ public class Hand : MonoBehaviour
         if (_grabbedTool == null)
         {
             Collider2D collider = Physics2D.OverlapCircle(transform.position, 0.1f, _toolLayer);
-            if (collider.TryGetComponent(out Tool tool))
+            if (collider != null && collider.TryGetComponent(out Tool tool))
             {
                 tool.ClickTool();
                 return;
