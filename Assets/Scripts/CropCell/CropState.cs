@@ -5,5 +5,6 @@ using UnityEngine;
 public enum CropState : int
 {
     blank,
-    fertile
+    fertile,
+    dead,
 }

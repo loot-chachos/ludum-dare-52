@@ -4,15 +4,54 @@ using UnityEngine;
 
 public class CropCell : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Plant _hostedPlant = null;
+    [SerializeField] private CropState _state = CropState.blank;
+
+    #region Lifecycle
+    public CropCell()
     {
-        
+        _hostedPlant = null;
+        _state = CropState.blank;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Bury(Plant plant)
     {
-        
+        _state = CropState.fertile;
+        _hostedPlant = plant;
     }
+
+    public void Kill()
+    {
+        _hostedPlant = null;
+        _state = CropState.dead;
+    }
+    #endregion Lifecycle
+
+
+    #region Peaceful gameplay
+    public void Watered()
+    {
+        _hostedPlant.WateredCount++;
+    }
+
+    public void Move()
+    {
+        // TODO
+    }
+    #endregion Peaceful gameplay
+
+
+    #region Speed run gameplay
+    public void Harvest()
+    {
+        _hostedPlant = null;
+        // TODO
+    }
+
+    public void Fertilize()
+    {
+        // TODO
+    }
+
+    #endregion Speed run gameplay
 }
