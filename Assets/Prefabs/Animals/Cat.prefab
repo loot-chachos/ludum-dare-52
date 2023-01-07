@@ -56,6 +56,10 @@ PrefabInstance:
       value: Cat
       objectReference: {fileID: 0}
     - target: {fileID: 1900703949256159591, guid: 6cf3879205ec33f49b1deb5bf84b460f, type: 3}
+      propertyPath: _animalParameters
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d7f05951a129e14cbd483051e852f22, type: 2}
+    - target: {fileID: 1900703949256159591, guid: 6cf3879205ec33f49b1deb5bf84b460f, type: 3}
       propertyPath: _animalMovementParameters
       value: 
       objectReference: {fileID: 11400000, guid: 1d7f05951a129e14cbd483051e852f22, type: 2}

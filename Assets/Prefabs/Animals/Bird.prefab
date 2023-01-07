@@ -47,7 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c3cd6ef5cf2b342b80341485d22483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animalMovementParameters: {fileID: 11400000, guid: 0fa16ff5d660dff43a8346e6385015f2, type: 2}
+  _animalParameters: {fileID: 11400000, guid: 0fa16ff5d660dff43a8346e6385015f2, type: 2}
+  _destroyDistanceFromCenter: 25
+  _onKilled:
+    m_PersistentCalls:
+      m_Calls: []
+  _particlePrefab: {fileID: 3334573929712909337, guid: e32dd15f190eb2c4eb46bfd31d497749, type: 3}
 --- !u!61 &1183768682007956209
 BoxCollider2D:
   m_ObjectHideFlags: 0
