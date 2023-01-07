@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum PlantState : int
 {
-    Underground,
+    Underground = 0,
     Young,
     Maturity,
     Great,
