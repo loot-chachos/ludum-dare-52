@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public static GameManager Instance;
+
+    [SerializeField] private MenuManager _menuManager = null;
+    [SerializeField] private ScoreManager _scoreManager = null;
+    [SerializeField] private WorldEvolutionManager _worldEvolutionManager = null;
+
+    public WorldEvolutionManager WorldEvolutionManager { get => _worldEvolutionManager; }
+    public ScoreManager ScoreManager { get => _scoreManager; }
+    public MenuManager MenuManager { get => _menuManager; }
+    void Awake()
     {
-        
+        if (Instance != this && Instance != null)
+            Destroy(gameObject);
+        else
+            Instance = this;
     }
 }
