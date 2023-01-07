@@ -28,11 +28,21 @@ public class WorldEvolutionManager : MonoBehaviour
     public void OnKillAnimals()
     {
         _currentWorldEvolutionPercent += _parameters.KillDegradationPercent;
+        CheckWorldViability();
     }
 
     [ContextMenu("OnUseFertilizer")]
     public void OnUseFertilizer()
     {
         _currentWorldEvolutionPercent += _parameters.FertilizerDegradationPercent;
+        CheckWorldViability();
+    }
+
+    private void CheckWorldViability()
+    {
+        if (_currentWorldEvolutionPercent >= 100.0f)
+        {
+            GameManager.Instance.EndGame(false);
+        }
     }
 }
