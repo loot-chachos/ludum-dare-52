@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [SerializeField] private MenuManager _menuManager = null;
-    [SerializeField] private Garden _gardenSettings = null;
     [SerializeField] private ScoreManager _scoreManager = null;
     [SerializeField] private WorldEvolutionManager _worldEvolutionManager = null;
+    [SerializeField] private Garden _gardenSettings = null;
+    [SerializeField] private SeedsGrid _seedsGrid = null;
+    [SerializeField] private Hand _hand = null;
 
     private bool _isPlaying = false;
     private Grid _grid = null;
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
     public MenuManager MenuManager { get => _menuManager; }
     public bool HasStarted { get => _isPlaying; }
     public Grid Grid { get => _grid;}
+    public Hand Hand { get => _hand; }
 
     void Awake()
     {
@@ -57,6 +60,10 @@ public class GameManager : MonoBehaviour
         _grid = new Grid(_gardenSettings);
         _grid.InitializeGrid(_gridRoot.transform);
         _grid.SeedPlant(5);
+        //_grid.SeedPlant(4);
+        //_grid.SeedPlant(2);
+        //_grid.SeedPlant(7);
+        _seedsGrid.SpawnGrid();
     }
 
     public void EndGame(bool isWin)

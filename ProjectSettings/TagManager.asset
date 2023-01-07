@@ -3,12 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Animal
+  - Plant
+  - Tool
+  - Hand
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Tool
   - Water
   - UI
   - 
@@ -46,6 +50,9 @@ TagManager:
     locked: 0
   - name: Plant
     uniqueID: 2610120395
+    locked: 0
+  - name: Tool
+    uniqueID: 3651629291
     locked: 0
   - name: Animals
     uniqueID: 1223629477

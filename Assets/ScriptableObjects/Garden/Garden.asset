@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Garden
   m_EditorClassIdentifier: 
   _tilePrefab: {fileID: 5812976468972463041, guid: 0edc46930e8cbd948b678164bfca63e4, type: 3}
-  _gridSize: {x: 5, y: 5}
+  _gridSize: {x: 12, y: 4}
   _cropPadding: {x: 1, y: 1}
-  _startingPos: {x: 0, y: 0}
+  _startingPos: {x: -8, y: -4}
   _generatonDirection: 0
   _updateFrequencyInSeconds: 1
   _availablePlants:

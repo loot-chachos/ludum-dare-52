@@ -13,12 +13,12 @@ public static class GridGeneration
         float paddingX = padding.x * direction.x;
 
         // Generate the grid
-        for (int j = 0; j < gridSize.y; j++)
+        for (int j = 0; j < gridSize.x; j++)
         {
-            for (int i = 0; i < gridSize.x; i++)
+            for (int i = 0; i < gridSize.y; i++)
             {
                 GameObject currentCrop = GameObject.Instantiate(prefab, new Vector3(start.x + j * paddingX, start.y + i * paddingY), Quaternion.identity, parent);
-                int index = (j % (int)gridSize.x) + i;
+                int index = (j % (int)gridSize.y) + i;
                 crops[index] = currentCrop.GetComponent<CropCell>();
             }
         }
@@ -26,7 +26,7 @@ public static class GridGeneration
         return crops;
     }
 
-    private static Vector2 GetPonderationDirection(GenerationDirection direction)
+    public static Vector2 GetPonderationDirection(GenerationDirection direction)
     {
         switch (direction)
         {
