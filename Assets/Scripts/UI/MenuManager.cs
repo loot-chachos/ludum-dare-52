@@ -21,6 +21,7 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         _startPanel.SetActive(false);
+        GameManager.Instance.StartGame();
     }
 
     // Called by UI

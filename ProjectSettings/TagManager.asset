@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 826515141
+    locked: 0
+  - name: Plant
+    uniqueID: 2610120395
+    locked: 0
+  - name: Animals
+    uniqueID: 1223629477
+    locked: 0
+  - name: FX
+    uniqueID: 3408849273
+    locked: 0
+  - name: UI
+    uniqueID: 3236224755
+    locked: 0
