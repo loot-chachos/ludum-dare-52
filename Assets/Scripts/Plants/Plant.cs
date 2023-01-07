@@ -15,22 +15,21 @@ public class Plant : ScriptableObject
     #endregion Settings
 
     #region Runtime variables
-    private PlantState _state = PlantState.Underground;
-    private int _wateredCount = 0;
-    private int _harvestCount = 0;
-    private int _stoleByAnimalsCount = 0;
-
-    public int WateredCount { get; set; }
+    public PlantState State { get; internal set; }
+    public float TimeSpentAlive { get; internal set; }
+    public int WateredCount { get; internal set; }
+    public int HarvestCount { get; internal set; }
+    public int FertilizeCount { get; internal set; }
+    public int StoleByAnimalsCount { get; internal set; }
     #endregion Runtime variables
-
-
-
 
     public Plant()
     {
-        _state = PlantState.Underground;
-        _wateredCount = 0;
-        _harvestCount = 0;
-        _stoleByAnimalsCount = 0;
+        State = PlantState.Underground;
+        TimeSpentAlive = 0.0F;
+        WateredCount = 0;
+        FertilizeCount = 0;
+        HarvestCount = 0;
+        StoleByAnimalsCount = 0;
     }
 }
