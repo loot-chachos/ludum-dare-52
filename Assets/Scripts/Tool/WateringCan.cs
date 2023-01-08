@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WateringCan : CropTool
+public class WateringCan : DraggableTool<CropCell>
 {
-    protected override void UseTool() { }
+    protected override void UseTool() {}
 
-    public override void UseTool(CropCell crop)
+    protected override void Action(CropCell crop)
     {
-        if (crop != null)
-        {
-            crop.Watered();
-        }
-        ReturnToStartPos();
+        // Play watering animation
+        crop.Watered();
     }
 }

@@ -1,17 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fertilizer : DraggableTool
+public class Fertilizer : DraggableTool<CropCell>
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public Type type { get { return typeof(CropCell); } }
+
+    protected override void Action(CropCell crop)
     {
-        if (collision.TryGetComponent(out CropCell crop))
+        if (GameManager.Instance.HasStarted)
         {
-            if (GameManager.Instance.HasStarted)
-            {
-                crop.Fertilize();
-            }
+            crop.Fertilize();
         }
     }
 }

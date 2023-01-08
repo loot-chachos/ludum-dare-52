@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -67,6 +68,11 @@ public class Hand : MonoBehaviour
         }
     }
 
+    public Collider2D[] FindCollision()
+    {
+        return Physics2D.OverlapCircleAll(transform.position, 0.5f, _clickableLayer);
+    }
+
     private void OnMouseClick()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f, _clickableLayer);
@@ -114,6 +120,10 @@ public class Hand : MonoBehaviour
 
     public void GrabTool(Tool tool)
     {
+        // Release previous tool
+        _grabbedTool?.Release();
+        // Assign new one
         _grabbedTool = tool;
+        _grabbedTool.Grap();
     }
 }
