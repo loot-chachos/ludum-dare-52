@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23678f67f86733546ba2b1332643ad6a, type: 3}
   m_Name: AnimalsSpawnParameters
   m_EditorClassIdentifier: 
+  SpawnRateInMenu: 1
   SpawnRateByWorldEvolutionPercent:
     serializedVersion: 2
     m_Curve:

@@ -9,17 +9,29 @@ public class AnimalsSpawner : MonoBehaviour
     private float _timer = 0.0f;
     private void Update()
     {
+        if (GameManager.Instance.IsGamePaused)
+        {
+            return;
+        }
+        
+        _timer += Time.deltaTime;
+
+        float spawnRate = 0.0f;
         if (GameManager.Instance.HasStarted)
         {
-            _timer += Time.deltaTime;
-
-            float spawnRate = _animalSpawnParameters.SpawnRateByWorldEvolutionPercent.Evaluate(GameManager.Instance.WorldEvolutionManager.CurrentWorldEvolutionPercent);
+            spawnRate = _animalSpawnParameters.SpawnRateByWorldEvolutionPercent.Evaluate(GameManager.Instance.WorldEvolutionManager.CurrentWorldEvolutionPercent);
             spawnRate /= 1.0f + GameManager.Instance.SeedsGrid.SeedsCount() * _animalSpawnParameters.SeedSpawnMultiplier;
-            if (_timer > spawnRate)
-            {
-                _timer = 0.0f;
-                SpawnAnAnimal();
-            }
+        }
+        else
+        {
+            // Have some spawn during main menu
+            spawnRate = _animalSpawnParameters.SpawnRateInMenu;
+        }
+
+        if (_timer > spawnRate)
+        {
+            _timer = 0.0f;
+            SpawnAnAnimal();
         }
     }
 
@@ -39,6 +51,7 @@ public class AnimalsSpawner : MonoBehaviour
         }
         int randomIndex = Random.Range(0, _animalPrefabs.Count);
         Animal animal = Instantiate(_animalPrefabs[randomIndex], spawnPoint, Quaternion.identity, transform);
+
         CropCell crop = GameManager.Instance.Grid.FindRandomCropAtLeastState(PlantState.Maturity);
         if (crop == null)
         { 

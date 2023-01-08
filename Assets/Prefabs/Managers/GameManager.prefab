@@ -50,6 +50,7 @@ MonoBehaviour:
   - {fileID: 8766365151035769322, guid: 668615080e9110b488564425c78c63c4, type: 3}
   - {fileID: 266514820273216130, guid: d12036bd86ba2ec489c5804378fa6a76, type: 3}
   - {fileID: 7872730874864574019, guid: 6050bcfbd7a4bf843ad4e837db5b99c8, type: 3}
+  - {fileID: 3150521608119873506, guid: 33938a96dcf723a44b7b406296c018af, type: 3}
   _animalSpawnParameters: {fileID: 11400000, guid: 38ba09d037ae5a946b842cb1b63663d9, type: 2}
 --- !u!1 &1123963613
 GameObject:
@@ -295,6 +296,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7293351352395208114}
     m_Modifications:
+    - target: {fileID: 2222105111815227397, guid: f52d6f05ff3c08645a128dc352533be1, type: 3}
+      propertyPath: m_fontSize
+      value: 86.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658422011125126577, guid: f52d6f05ff3c08645a128dc352533be1, type: 3}
+      propertyPath: m_fontSize
+      value: 86.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2937187320656868540, guid: f52d6f05ff3c08645a128dc352533be1, type: 3}
+      propertyPath: m_fontSize
+      value: 86.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304179572064865115, guid: f52d6f05ff3c08645a128dc352533be1, type: 3}
+      propertyPath: m_fontSize
+      value: 86.95
+      objectReference: {fileID: 0}
     - target: {fileID: 8528641925868871978, guid: f52d6f05ff3c08645a128dc352533be1, type: 3}
       propertyPath: m_RootOrder
       value: 2

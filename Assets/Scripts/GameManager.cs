@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Hand _hand = null;
 
     private bool _isPlaying = false;
+    private bool _isPaused = false;
     private Grid _grid = null;
     private GameObject _gridRoot = null;
 
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     public ScoreManager ScoreManager { get => _scoreManager; }
     public MenuManager MenuManager { get => _menuManager; }
     public bool HasStarted { get => _isPlaying; }
+    public bool IsGamePaused { get => _isPaused; }
     public Grid Grid { get => _grid;}
     public SeedsGrid SeedsGrid { get => _seedsGrid; }
     public Hand Hand { get => _hand; }
@@ -38,6 +40,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        InitGridRoot();
+        // Spawn menu grid to allow animal spawn
+        _grid = new Grid(_gardenSettings);
+        _grid.InitializeGrid(_gridRoot.transform);
+    }
+
     public void Update()
     {
 #if UNITY_EDITOR
@@ -51,13 +61,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        _isPlaying = true;
-        
-        if (_gridRoot == null)
-        {
-            _gridRoot = new GameObject();
-            _gridRoot.name = "GardenGrid";
-        }
+        InitGridRoot();
 
         _grid = new Grid(_gardenSettings);
         _grid.InitializeGrid(_gridRoot.transform);
@@ -66,6 +70,20 @@ public class GameManager : MonoBehaviour
         //_grid.SeedPlant(2);
         //_grid.SeedPlant(7);
         _seedsGrid.SpawnGrid();
+
+        _isPlaying = true;
+    }
+
+    private void InitGridRoot()
+    {
+        // Destroy menu grid
+        if (_gridRoot != null)
+        {
+            Destroy(_gridRoot);
+        }
+
+        _gridRoot = new GameObject();
+        _gridRoot.name = "GardenGrid";
     }
 
     public void EndGame(bool isWin)
