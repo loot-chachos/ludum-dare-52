@@ -398,6 +398,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1070338908536529419, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: m_fontSize
+      value: 89.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1645802467816317650, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: _gameView
       value: 
@@ -490,6 +494,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6453693955623461205, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: m_fontSize
+      value: 89.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179366851861249249, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: m_fontSize
+      value: 89.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7293351352395208114, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -533,6 +545,10 @@ PrefabInstance:
     - target: {fileID: 7293351352395208114, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035649789722795500, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: m_fontSize
+      value: 89.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
