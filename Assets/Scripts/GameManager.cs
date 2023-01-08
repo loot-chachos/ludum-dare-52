@@ -97,10 +97,6 @@ public class GameManager : MonoBehaviour
         // Plant grid
         _grid = new Grid(_gardenSettings);
         _grid.InitializeGrid(_gameplayGridRoot.transform);
-        _grid.SeedPlant(5);
-        //_grid.SeedPlant(4);
-        //_grid.SeedPlant(2);
-        //_grid.SeedPlant(7);
 
         // Food for animals grid
         _seedsGrid.SpawnGrid();
@@ -120,9 +116,18 @@ public class GameManager : MonoBehaviour
             Destroy(_menuGridRoot);
         }
 
-        _animalSpawner.OnStartGame();
-        _grid.ActivateGrid();
+        // HUD
         _scoreManager.Show();
+
+        // Grid
+        _grid.ActivateGrid();
+        _grid.SeedPlant(0);
+        //_grid.SeedPlant(4);
+        //_grid.SeedPlant(2);
+        //_grid.SeedPlant(7);
+
+        // Others
+        _animalSpawner.OnStartGame();
 
         _isPlaying = true;
     }

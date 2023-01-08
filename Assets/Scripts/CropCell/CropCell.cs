@@ -6,7 +6,6 @@ using UnityEngine;
 public class CropCell : MonoBehaviour, IEatable
 {
     #region Fields
-    [SerializeField] private Plant _hostedPlant = null;
     [SerializeField] private CropState _state = CropState.blank;
     [SerializeField] private SpriteRenderer _soilSpriteRenderer;
     [SerializeField] private SpriteRenderer _plantSpriteRenderer;
@@ -16,9 +15,13 @@ public class CropCell : MonoBehaviour, IEatable
     [SerializeField] private Sprite _deadSprite = null;
     #endregion Fields
 
+    private Plant _hostedPlant = null;
+    private int _cellIndex = -1;
+
     public float TimeAlive => _hostedPlant.TimeSpentAlive;
 
     public Plant HostedPlant { get => _hostedPlant;}
+    public CropState State { get => _state;}
 
     #region Events
     private Action _isWatered = null;
@@ -33,9 +36,8 @@ public class CropCell : MonoBehaviour, IEatable
             _isWatered -= value;
         }
     }
-
-    private Action _isCut = null;
-    public event Action IsCut
+    private Action<int> _isCut = null;
+    public event Action<int> IsCut
     {
         add
         {
@@ -106,9 +108,16 @@ public class CropCell : MonoBehaviour, IEatable
     #endregion Events
 
     #region Lifecycle
-    public CropCell()
+    public CropCell(int cellIndex)
     {
         _hostedPlant = null;
+        SetIndex(cellIndex);
+    }
+
+    public void SetIndex(int index)
+    {
+        _hostedPlant = null;
+        _cellIndex = index;
     }
 
     public void Initiliaze()
@@ -196,12 +205,20 @@ public class CropCell : MonoBehaviour, IEatable
 
         if (_isCut != null)
         {
-            _isCut();
+            _isCut(_cellIndex);
         }
     }
 
     public void Harvest()
     {
+        if (_hostedPlant == null)
+        {
+#if UNITY_EDITOR
+            Debug.Log("Can't harvest empty plant. Return.");
+#endif
+            return;
+        }
+
         _hostedPlant.TimeSpentAlive = 0.0F;
         _hostedPlant.HarvestCount++;
         _hostedPlant.State = 0;
@@ -209,7 +226,7 @@ public class CropCell : MonoBehaviour, IEatable
 
         if (_isCut != null)
         {
-            _isCut();
+            _isCut(_cellIndex);
         }
     }
 
@@ -223,7 +240,7 @@ public class CropCell : MonoBehaviour, IEatable
             _isFertilize();
         }
     }
-    #endregion Speed run gameplay
+#endregion Speed run gameplay
 
     public void UpdateCropState(CropState state)
     {

@@ -20,6 +20,7 @@ public static class GridGeneration
                 GameObject currentCrop = GameObject.Instantiate(prefab, new Vector3(start.x + j * paddingX, start.y + i * paddingY), Quaternion.identity, parent);
                 int index = (j * (int)gridSize.y) + i;
                 crops[index] = currentCrop.GetComponent<CropCell>();
+                crops[index].SetIndex(index);
             }
         }
 

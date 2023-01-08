@@ -47,9 +47,14 @@ public class Plant
         // TODO: switch sprite at least.
     }
 
-    public void UpdateSprite()
+    public void UpdateSprite(int cellIndex)
     {
         PlantSpriteRenderer.sprite = CurrentEvolution.Visual;
+    }
+
+    public void UpdateSprite()
+    {
+        UpdateSprite(-1);
     }
 
     public void UpdateSpriteOnEvo(PlantState state = PlantState.Underground, PlantEvolution evo = null)
