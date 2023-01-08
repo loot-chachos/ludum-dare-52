@@ -296,9 +296,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tilePrefab: {fileID: 7762261428381585992, guid: 289f7637f7136bc4c9b689b835f50d0c, type: 3}
-  _gridSize: {x: 2, y: 4}
+  _gridSize: {x: 2, y: 6}
   _cropPadding: {x: 1, y: 1}
-  _startingPos: {x: 5, y: -26}
+  _startingPos: {x: 5, y: -28}
   _generatonDirection: 0
 --- !u!1 &5917783378433668649
 GameObject:
