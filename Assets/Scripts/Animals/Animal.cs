@@ -35,7 +35,7 @@ public class Animal : MonoBehaviour
             _targetFlower.Stolen();
         }
 
-        if (transform.position.sqrMagnitude > _destroyDistanceFromCenter * _destroyDistanceFromCenter)
+        if ((GameManager.Instance.GameViewCenter - transform.position).sqrMagnitude > _destroyDistanceFromCenter * _destroyDistanceFromCenter)
         {
             Destroy(gameObject);
         }

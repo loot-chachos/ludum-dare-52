@@ -127,6 +127,7 @@ MonoBehaviour:
   - {fileID: 266514820273216130, guid: d12036bd86ba2ec489c5804378fa6a76, type: 3}
   - {fileID: 7872730874864574019, guid: 6050bcfbd7a4bf843ad4e837db5b99c8, type: 3}
   - {fileID: 3150521608119873506, guid: 33938a96dcf723a44b7b406296c018af, type: 3}
+  _menuAnimalSpawnParameters: {fileID: 0}
   _animalSpawnParameters: {fileID: 11400000, guid: 38ba09d037ae5a946b842cb1b63663d9, type: 2}
 --- !u!1 &1123963613
 GameObject:
@@ -353,9 +354,9 @@ MonoBehaviour:
   _scoreManager: {fileID: 8122893959497476784}
   _worldEvolutionManager: {fileID: 1123963615}
   _animalSpawner: {fileID: 927358527}
-  _gameView: {fileID: 0}
+  _gameViewPosition: {x: 0, y: 0, z: -10}
   _menuGardenSettings: {fileID: 11400000, guid: 987749b3cf8f4874ba32255ca050aa74, type: 2}
-  _gardenSettings: {fileID: 11400000, guid: 739c82b054e4b5f44b661f5c50164ced, type: 2}
+  _gardenSettings: {fileID: 11400000, guid: ead40f0b0c7ae0f4c8f9d0d8e6a04f0d, type: 2}
   _seedsGrid: {fileID: 30494491732650161}
   _hand: {fileID: 7572492189808383045}
 --- !u!1 &7440590588559381597

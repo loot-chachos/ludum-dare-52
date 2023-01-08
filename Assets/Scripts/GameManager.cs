@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AnimalsSpawner _animalSpawner = null;
 
     [Header("Others")]
-    [SerializeField] private Transform _gameView = null;
+    [SerializeField] private Vector3 _gameViewPosition = Vector3.zero;
     [SerializeField] private Garden _menuGardenSettings = null;
     [SerializeField] private Garden _gardenSettings = null;
     [SerializeField] private SeedsGrid _seedsGrid = null;
@@ -34,6 +34,13 @@ public class GameManager : MonoBehaviour
     public Grid Grid { get => _grid;}
     public SeedsGrid SeedsGrid { get => _seedsGrid; }
     public Hand Hand { get => _hand; }
+    public Vector3 GameViewCenter
+    {
+        get
+        {
+            return HasStarted ? new Vector3(_gameViewPosition.x, _gameViewPosition.y, 0) : Vector3.zero;
+        }
+    }
 
     void Awake()
     {
@@ -99,22 +106,24 @@ public class GameManager : MonoBehaviour
         _seedsGrid.SpawnGrid();
 
         _transitionManager.IsTransitionFinished += OnIntroTransitionFinished;
-        _transitionManager.StartIntroTransition(_gameView.position);
+        _transitionManager.StartIntroTransition(_gameViewPosition);
     }
 
     private void OnIntroTransitionFinished()
     {
+        _transitionManager.IsTransitionFinished -= OnIntroTransitionFinished;
+
         _animalSpawner.Clean();
         // Destroy menu grid
         if (_menuGridRoot != null)
         {
             Destroy(_menuGridRoot);
         }
-        
-        _grid.ActivateGrid();
 
+        _animalSpawner.OnStartGame();
+        _grid.ActivateGrid();
         _scoreManager.Show();
-        _transitionManager.IsTransitionFinished -= OnIntroTransitionFinished;
+
         _isPlaying = true;
     }
 
