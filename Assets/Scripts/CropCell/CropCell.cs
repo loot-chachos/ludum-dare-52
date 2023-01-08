@@ -16,6 +16,8 @@ public class CropCell : MonoBehaviour, IEatable
     [SerializeField] private Sprite _deadSprite = null;
     #endregion Fields
 
+    private int _cellIndex = -1;
+
     public float TimeAlive => _hostedPlant.TimeSpentAlive;
 
     public Plant HostedPlant { get => _hostedPlant;}
@@ -33,9 +35,8 @@ public class CropCell : MonoBehaviour, IEatable
             _isWatered -= value;
         }
     }
-
-    private Action _isCut = null;
-    public event Action IsCut
+    private Action<int> _isCut = null;
+    public event Action<int> IsCut
     {
         add
         {
@@ -106,9 +107,15 @@ public class CropCell : MonoBehaviour, IEatable
     #endregion Events
 
     #region Lifecycle
-    public CropCell()
+    public CropCell(int cellIndex)
     {
         _hostedPlant = null;
+        SetIndex(cellIndex);
+    }
+
+    public void SetIndex(int index)
+    {
+        _cellIndex = index;
     }
 
     public void Initiliaze()
@@ -196,7 +203,7 @@ public class CropCell : MonoBehaviour, IEatable
 
         if (_isCut != null)
         {
-            _isCut();
+            _isCut(_cellIndex);
         }
     }
 
@@ -209,7 +216,7 @@ public class CropCell : MonoBehaviour, IEatable
 
         if (_isCut != null)
         {
-            _isCut();
+            _isCut(_cellIndex);
         }
     }
 

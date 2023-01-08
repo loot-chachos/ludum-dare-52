@@ -103,6 +103,12 @@ public class Grid
     {
         for (int i = 0; i < _crops.Length; i++)
         {
+            _crops[i].IsCut += OnCropCut;
+            _crops[i].IsBury += _isCropBury;
+            _crops[i].IsFertilize += _isCropFertilize;
+            _crops[i].IsMoved += _isCropMoved;
+            _crops[i].IsWatered += _isCropWatered;
+            _crops[i].PlantEvolved += _plantEvolved;
             _crops[i].Initiliaze();
         }
     }
@@ -190,5 +196,47 @@ public class Grid
             return null;
         }
         return possibleCells[UnityEngine.Random.Range(0, possibleCells.Count)];
+    }
+
+    private void OnCropCut(int cellIndex)
+    {
+        // Spread it to the 8 adjacent cells randomly
+        int cellX = (int)(cellIndex / _garden.Size.y);
+        int cellY = (int)(cellIndex % _garden.Size.y);
+#if UNITY_EDITOR
+        //Debug.Log($"cell index: {cellIndex}, X: {cellX}, Y: {cellY}");
+#endif
+
+        // Clamp future values
+        int previousXCell = Mathf.Clamp(cellX-1, 0, (int)_garden.Size.x);
+        int nextCellX = Mathf.Clamp(cellX+1, 0, (int)_garden.Size.x);
+        int previousYCell = Mathf.Clamp(cellY-1, 0, (int)_garden.Size.y);
+        int nextCellY = Mathf.Clamp(cellY+1, 0, (int)_garden.Size.y);
+
+        for (int i = previousXCell; i <= nextCellX; i++)
+        {
+            for (int j = previousYCell; j <= nextCellY; j++)
+            {
+#if UNITY_EDITOR
+                //Debug.Log($"crop is X:{i}, Y:{j}");
+#endif
+
+                if ((i != cellX || j != cellY)  && UnityEngine.Random.value > 0.5f)
+                {
+#if UNITY_EDITOR
+                    //Debug.Log($"Next crop updated will be X:{i}, Y:{j}");
+#endif
+                    // Seed it
+                    int cropIndex = i * (int)_garden.Size.y + j;
+                    Plant plant = _garden.PickRandomPlant();
+                    _crops[cropIndex].Bury(plant);
+                }
+            }
+        }
+
+        if (_isCropCut != null)
+        {
+            _isCropCut();
+        }
     }
 }
