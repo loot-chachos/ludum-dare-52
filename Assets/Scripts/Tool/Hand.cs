@@ -21,28 +21,36 @@ public class Hand : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            OnMoouseClick();
+            OnMouseClick();
         }
     }
 
-    private void OnMoouseClick()
+    private void OnMouseClick()
     {
-        Collider2D collider = Physics2D.OverlapCircle(transform.position, 0.1f, _clickableLayer);
-        if (collider != null)
+        Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 0.1f, _clickableLayer);
+        for (int i = 0; i < collider.Length; i++)
         {
-            if (collider.TryGetComponent(out Tool tool))
+            if (collider[i].TryGetComponent(out Tool tool))
             {
                 if (_grabbedTool == null)
                 {
                     tool.ClickTool();
+                    return;
                 }
-                return;
             }
-            else if (collider.TryGetComponent(out CropCell cell))
+            else if (collider[i].TryGetComponent(out CropCell cell))
             {
                 cell.Harvest();
-                return;
             }
+            else if (collider[i].TryGetComponent(out Animal animal))
+            {
+                animal.Kill();
+            }
+        }
+        
+        if (_grabbedTool)
+        {
+            _grabbedTool.ClickTool();
         }
     }
 

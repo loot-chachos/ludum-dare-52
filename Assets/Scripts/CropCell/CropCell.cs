@@ -187,6 +187,19 @@ public class CropCell : MonoBehaviour
     #endregion Peaceful gameplay
 
     #region Speed run gameplay
+    public void Stolen()
+    {
+        _hostedPlant.TimeSpentAlive = 0.0F;
+        _hostedPlant.StoleByAnimalsCount++;
+        _hostedPlant.State = 0;
+        // TODO
+
+        if (_isCut != null)
+        {
+            _isCut();
+        }
+    }
+
     public void Harvest()
     {
         _hostedPlant.TimeSpentAlive = 0.0F;

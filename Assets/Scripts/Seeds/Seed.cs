@@ -6,8 +6,12 @@ using UnityEngine;
 public class Seed : MonoBehaviour
 {
     [SerializeField] private GameObject _seedVisual = null;
+    private bool _isSeeded = false;
 
     private Action _isEaten = null;
+
+    public bool IsSeeded { get => _isSeeded; }
+
     public event Action IsEaten
     {
         add
@@ -18,23 +22,6 @@ public class Seed : MonoBehaviour
         remove
         {
             _isEaten -= value;
-        }
-    }
-
-    private void OnMouseOver()
-    {
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Animal"))
-        {
-            _seedVisual.SetActive(false);
-            _isEaten?.Invoke();
-        }
-        if (collision.TryGetComponent<Hand>(out Hand hand) && hand.GrabbedTool is Seeder)
-        {
-            _seedVisual.SetActive(true);
         }
     }
 }

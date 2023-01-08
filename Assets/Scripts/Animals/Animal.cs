@@ -9,7 +9,7 @@ public class Animal : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     [SerializeField] private AnimalParameters _animalParameters;
     [SerializeField] private float _destroyDistanceFromCenter = 10.0f;
-    private Vector2 _targetFlower = Vector2.zero;
+    private CropCell _targetFlower = null;
 
     [SerializeField] private UnityEvent _onKilled;
     [SerializeField] private GameObject _particlePrefab = null;
@@ -20,23 +20,28 @@ public class Animal : MonoBehaviour
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-    public void StartMovement(Vector2 targetPoint)
+    public void StartMovement(CropCell targetPoint)
     {
         _targetFlower = targetPoint;
-        Vector2 direction = (_targetFlower - (Vector2)transform.position).normalized;
+        Vector2 direction = (_targetFlower.transform.position - transform.position).normalized;
         _rigidbody2D.velocity = direction * _animalParameters.Speed;
         _spriteRenderer.transform.right = direction;
     }
 
     private void Update()
     {
+        if (Vector2.Distance(_targetFlower.transform.position, transform.position) < 0.2f)
+        {
+            _targetFlower.Stolen();
+        }
+
         if (transform.position.sqrMagnitude > _destroyDistanceFromCenter * _destroyDistanceFromCenter)
         {
             Destroy(gameObject);
         }
     }
 
-    private void OnMouseDown()
+    public void Kill()
     {
         GameManager.Instance.ScoreManager.OnMoneyAdded(_animalParameters.MoneyReward);
         GameManager.Instance.WorldEvolutionManager.OnKillAnimals();

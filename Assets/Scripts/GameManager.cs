@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public MenuManager MenuManager { get => _menuManager; }
     public bool HasStarted { get => _isPlaying; }
     public Grid Grid { get => _grid;}
+    public SeedsGrid SeedsGrid { get => _seedsGrid; }
     public Hand Hand { get => _hand; }
 
     void Awake()

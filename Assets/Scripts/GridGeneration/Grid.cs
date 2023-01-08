@@ -172,6 +172,10 @@ public class Grid
                 possibleCells.Add(crop);
             }
         }
+        if (possibleCells.Count == 0)
+        {
+            return null;
+        }
         return possibleCells[UnityEngine.Random.Range(0, possibleCells.Count)];
     }
 }

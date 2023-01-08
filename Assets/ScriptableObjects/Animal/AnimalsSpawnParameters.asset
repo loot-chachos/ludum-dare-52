@@ -47,3 +47,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   MinSpawnPoint: {x: -10, y: -6}
   MaxSpawnPoint: {x: 10, y: 6}
+  SeedSpawnMultiplier: 0.1

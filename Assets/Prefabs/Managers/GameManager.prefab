@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e9a1d429e0c7a46b338624d5758de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tilePrefab: {fileID: 2726901382153145944, guid: 289f7637f7136bc4c9b689b835f50d0c, type: 3}
+  _tilePrefab: {fileID: 7762261428381585992, guid: 289f7637f7136bc4c9b689b835f50d0c, type: 3}
   _gridSize: {x: 2, y: 4}
   _cropPadding: {x: 1, y: 1}
   _startingPos: {x: 5, y: -4}
