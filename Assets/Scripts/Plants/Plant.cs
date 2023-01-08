@@ -61,4 +61,13 @@ public class Plant
     {
         UpdateSprite();
     }
+
+    internal void Regress()
+    {
+        if (State > 0)
+        {
+            State--;
+            UpdateSprite();
+        }
+    }
 }

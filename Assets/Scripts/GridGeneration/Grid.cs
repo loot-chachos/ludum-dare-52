@@ -109,7 +109,7 @@ public class Grid
             _crops[i].IsMoved += _isCropMoved;
             _crops[i].IsWatered += _isCropWatered;
             _crops[i].PlantEvolved += _plantEvolved;
-            _crops[i].Initiliaze();
+            _crops[i].Initiliaze(_garden.WateredDuration);
         }
     }
     #endregion Events
@@ -144,7 +144,7 @@ public class Grid
         }
 
         _crops[cellIndex].Bury(plant);
-    }    
+    }
 
     public void Update()
     {
@@ -178,7 +178,13 @@ public class Grid
                 possibleCells.Add(crop);
             }
         }
+
         return possibleCells[UnityEngine.Random.Range(0, possibleCells.Count)];
+    }
+
+    public CropCell FindRandomCrop()
+    {
+        return _crops[UnityEngine.Random.Range(0, _crops.Length)];
     }
 
     public CropCell FindRandomCropAtLeastState(PlantState plantState)
@@ -195,6 +201,7 @@ public class Grid
         {
             return null;
         }
+
         return possibleCells[UnityEngine.Random.Range(0, possibleCells.Count)];
     }
 
@@ -221,7 +228,7 @@ public class Grid
                 Debug.Log($"crop is X:{i}, Y:{j}");
 #endif
                 int cropIndex = i * (int)_garden.Size.y + j;
-                if (_crops[cropIndex].State == CropState.dead || _crops[cropIndex].HostedPlant != null)
+                if (_crops[cropIndex].State != CropState.fertile || _crops[cropIndex].HostedPlant != null)
                 {
                     continue;
                 }

@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: _menuAnimalSpawnParameters
       value: 
       objectReference: {fileID: 11400000, guid: 38ba09d037ae5a946b842cb1b63663d9, type: 2}
+    - target: {fileID: 1123963615, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: _currentWorldEvolutionPercent
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1645802467816317650, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: _gardenSettings
       value: 
