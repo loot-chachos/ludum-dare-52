@@ -6,39 +6,69 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _startPanel = null;
-    [SerializeField] private GameObject _winPanel = null;
-    [SerializeField] private GameObject _gameOverPanel = null;
+    private enum PanelAvailable : int
+    {
+        MainMenu,
+        Win,
+        GameOver,
+        Options,
+        Credits
+    }
+
+    [Header("Should follow the order define in the PanelAvailable Enum")]
+    [SerializeField] private List<GameObject> _panels = new List<GameObject>();
+
+    private GameObject _currentPanel = null;
 
     private void Start()
     {
-        _startPanel.SetActive(true);
-        _winPanel.SetActive(false);
-        _gameOverPanel.SetActive(false);
+        _currentPanel = _panels[0];
+        for (int i = 0; i < _panels.Count; i++)
+        {
+            _panels[i].SetActive(false);
+        }
+
+        _currentPanel.SetActive(true);
     }
 
-    // Called by UI
+    public void DisplayGameOverPanel()
+    {
+        _panels[(int)PanelAvailable.GameOver].SetActive(true);
+    }
+
+    public void DisplayWinPanel()
+    {
+        _panels[(int)PanelAvailable.Win].SetActive(true);
+    }
+
+    #region Called by the UI
     public void StartGame()
     {
-        _startPanel.SetActive(false);
+        _currentPanel.SetActive(false);
         GameManager.Instance.StartGame();
     }
 
-    // Called by UI
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    // Called by GameManager
-    public void DisplayGameOverPanel()
+    public void DisplayOptions()
     {
-        _gameOverPanel.SetActive(true);
+        _currentPanel.SetActive(false);
+        _panels[(int)PanelAvailable.Options].SetActive(true);
     }
 
-    // Called by GameManager
-    public void DisplayWinPanel()
+    public void DisplayCredits()
     {
-        _winPanel.SetActive(true);
+        _currentPanel.SetActive(false);
+        _panels[(int)PanelAvailable.Credits].SetActive(true);
     }
+
+    public void BackButton()
+    {
+        _currentPanel.SetActive(false);
+        _panels[(int)PanelAvailable.MainMenu].SetActive(true);
+    }
+    #endregion Called by the UI
 }
