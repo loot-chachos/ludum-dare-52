@@ -5,12 +5,22 @@ using UnityEngine;
 public class Hand : MonoBehaviour
 {
     [SerializeField] private LayerMask _clickableLayer;
+
+    [SerializeField] private KeyCode _fertilizerKeyCode = KeyCode.R;
+    [SerializeField] private KeyCode _seederKeyCode  = KeyCode.E;
+    [SerializeField] private KeyCode _shovelKeyCode = KeyCode.W;
+    [SerializeField] private KeyCode _wateringKeyCode = KeyCode.Q;
     private Tool _grabbedTool = null;
 
     public Tool GrabbedTool { get => _grabbedTool; }
 
     private void Update()
     {
+        if (GameManager.Instance.HasStarted == false)
+        {
+            return;
+        }
+
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0.0f;
         transform.position = mousePosition;
@@ -19,7 +29,39 @@ public class Hand : MonoBehaviour
             _grabbedTool.transform.position = mousePosition;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(_fertilizerKeyCode))
+        {
+            Tool tool = FindObjectOfType(typeof(Fertilizer)) as Tool;
+            if (tool != null)
+            {
+                GrabTool(tool);
+            }
+        }
+        else if (Input.GetKeyDown(_seederKeyCode))
+        {
+            Tool tool = FindObjectOfType(typeof(Seeder)) as Tool;
+            if (tool != null)
+            {
+                GrabTool(tool);
+            }
+        }
+        else if (Input.GetKeyDown(_shovelKeyCode))
+        {
+            Tool tool = FindObjectOfType(typeof(Shovel)) as Tool;
+            if (tool != null)
+            {
+                GrabTool(tool);
+            }
+        }
+        else if (Input.GetKeyDown(_wateringKeyCode))
+        {
+            Tool tool = FindObjectOfType(typeof(WateringCan)) as Tool;
+            if (tool != null)
+            {
+                GrabTool(tool);
+            }
+        }
+        else if (Input.GetMouseButtonDown(0))
         {
             OnMouseClick();
         }
