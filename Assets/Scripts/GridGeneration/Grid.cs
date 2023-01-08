@@ -204,7 +204,7 @@ public class Grid
         int cellX = (int)(cellIndex / _garden.Size.y);
         int cellY = (int)(cellIndex % _garden.Size.y);
 #if UNITY_EDITOR
-        //Debug.Log($"cell index: {cellIndex}, X: {cellX}, Y: {cellY}");
+        Debug.Log($"cell index: {cellIndex}, X: {cellX}, Y: {cellY}");
 #endif
 
         // Clamp future values
@@ -218,8 +218,13 @@ public class Grid
             for (int j = previousYCell; j <= nextCellY; j++)
             {
 #if UNITY_EDITOR
-                //Debug.Log($"crop is X:{i}, Y:{j}");
+                Debug.Log($"crop is X:{i}, Y:{j}");
 #endif
+                int cropIndex = i * (int)_garden.Size.y + j;
+                if (_crops[cropIndex].State == CropState.dead || _crops[cropIndex].HostedPlant != null)
+                {
+                    continue;
+                }
 
                 if ((i != cellX || j != cellY)  && UnityEngine.Random.value > 0.5f)
                 {
@@ -227,7 +232,7 @@ public class Grid
                     //Debug.Log($"Next crop updated will be X:{i}, Y:{j}");
 #endif
                     // Seed it
-                    int cropIndex = i * (int)_garden.Size.y + j;
+                    
                     Plant plant = _garden.PickRandomPlant();
                     _crops[cropIndex].Bury(plant);
                 }
