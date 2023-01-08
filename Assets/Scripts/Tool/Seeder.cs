@@ -2,13 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seeder : DraggableTool
+public class Seeder : DraggableTool<Seed>
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void Action(Seed seed)
     {
-        if (collision.TryGetComponent(out Seed seed))
-        {
-            seed.PlaceSeed();
-        }
+        seed.PlaceSeed();
     }
 }

@@ -28,6 +28,17 @@ public abstract class Tool : MonoBehaviour
         }
     }
 
+    public void Grap()
+    {
+        _isGrab = true;
+    }
+
+    public void Release()
+    {
+        _isGrab = false;
+        transform.position = _startPosition;
+    }
+
     protected virtual void UseTool()
     {
         ReturnToStartPos();

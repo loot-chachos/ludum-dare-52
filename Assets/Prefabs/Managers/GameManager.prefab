@@ -127,7 +127,7 @@ MonoBehaviour:
   - {fileID: 266514820273216130, guid: d12036bd86ba2ec489c5804378fa6a76, type: 3}
   - {fileID: 7872730874864574019, guid: 6050bcfbd7a4bf843ad4e837db5b99c8, type: 3}
   - {fileID: 3150521608119873506, guid: 33938a96dcf723a44b7b406296c018af, type: 3}
-  _menuAnimalSpawnParameters: {fileID: 0}
+  _menuAnimalSpawnParameters: {fileID: 11400000, guid: 68bf8645c54749649bef67b0a5253645, type: 2}
   _animalSpawnParameters: {fileID: 11400000, guid: 38ba09d037ae5a946b842cb1b63663d9, type: 2}
 --- !u!1 &1123963613
 GameObject:
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 1804185488396262311}
   m_Layer: 0
   m_Name: Hand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,6 +408,10 @@ MonoBehaviour:
   _clickableLayer:
     serializedVersion: 2
     m_Bits: 8
+  _fertilizerKeyCode: 114
+  _seederKeyCode: 101
+  _shovelKeyCode: 119
+  _wateringKeyCode: 113
 --- !u!58 &1589605409258980169
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -458,19 +462,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2222105111815227397, guid: f52d6f05ff3c08645a128dc352533be1, type: 3}
       propertyPath: m_fontSize
-      value: 86.95
+      value: 89.45
       objectReference: {fileID: 0}
     - target: {fileID: 2658422011125126577, guid: f52d6f05ff3c08645a128dc352533be1, type: 3}
       propertyPath: m_fontSize
-      value: 86.95
+      value: 89.45
       objectReference: {fileID: 0}
     - target: {fileID: 2937187320656868540, guid: f52d6f05ff3c08645a128dc352533be1, type: 3}
       propertyPath: m_fontSize
-      value: 86.95
+      value: 89.45
       objectReference: {fileID: 0}
     - target: {fileID: 5304179572064865115, guid: f52d6f05ff3c08645a128dc352533be1, type: 3}
       propertyPath: m_fontSize
-      value: 86.95
+      value: 89.45
       objectReference: {fileID: 0}
     - target: {fileID: 8528641925868871978, guid: f52d6f05ff3c08645a128dc352533be1, type: 3}
       propertyPath: m_RootOrder

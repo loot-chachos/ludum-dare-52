@@ -146,6 +146,9 @@ public class CropCell : MonoBehaviour, IEatable
 
             if (_state == CropState.fertile)
             {
+#if UNITY_EDITOR
+                Debug.Log("Check evolution");
+#endif
                 if (_hostedPlant.CanEvolve())
                 {
                     _hostedPlant.Evolve();
@@ -210,11 +213,8 @@ public class CropCell : MonoBehaviour, IEatable
         Debug.Log($"Crop {_cellIndex} is being watered");
 #endif
         _timeRemainingBeforeDeadCrop = _wateredDuration;
-        if (_hostedPlant == null)
-        {
-            UpdateCropState(CropState.fertile);
-        }
-        else
+        UpdateCropState(CropState.fertile);
+        if (_hostedPlant != null)
         {
             _hostedPlant.WateredCount++;
         }
