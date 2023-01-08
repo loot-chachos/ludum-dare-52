@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1900703949256159591}
   - component: {fileID: 1183768682007956209}
   - component: {fileID: 8413914533441690325}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bird
   m_TagString: Animal
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6861112549091450391}
   - component: {fileID: 3294760059905054205}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BirdSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1223629477
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1479914010, guid: 0704bf64acc283642868cc85bea7df09, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

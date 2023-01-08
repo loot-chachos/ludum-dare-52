@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hand : MonoBehaviour
 {
-    [SerializeField] private LayerMask _toolLayer;
+    [SerializeField] private LayerMask _clickableLayer;
     private Tool _grabbedTool = null;
 
     public Tool GrabbedTool { get => _grabbedTool; }
@@ -18,16 +18,29 @@ public class Hand : MonoBehaviour
         {
             _grabbedTool.transform.position = mousePosition;
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            OnMoouseClick();
+        }
     }
 
-    private void OnMouseDown()
+    private void OnMoouseClick()
     {
-        if (_grabbedTool == null)
+        Collider2D collider = Physics2D.OverlapCircle(transform.position, 0.1f, _clickableLayer);
+        if (collider != null)
         {
-            Collider2D collider = Physics2D.OverlapCircle(transform.position, 0.1f, _toolLayer);
-            if (collider != null && collider.TryGetComponent(out Tool tool))
+            if (collider.TryGetComponent(out Tool tool))
             {
-                tool.ClickTool();
+                if (_grabbedTool == null)
+                {
+                    tool.ClickTool();
+                }
+                return;
+            }
+            else if (collider.TryGetComponent(out CropCell cell))
+            {
+                cell.Harvest();
                 return;
             }
         }

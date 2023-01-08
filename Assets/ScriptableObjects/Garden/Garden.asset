@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 930b563a77149f9448ade1640af6d839, type: 3}
   m_Name: Garden
   m_EditorClassIdentifier: 
-  _tilePrefab: {fileID: 5812976468972463041, guid: 0edc46930e8cbd948b678164bfca63e4, type: 3}
+  _tilePrefab: {fileID: 5812976468972463041, guid: 7a0fc8ee18e49cb4db1d0eab9046626a, type: 3}
   _gridSize: {x: 12, y: 4}
   _cropPadding: {x: 1, y: 1}
   _startingPos: {x: -8, y: -4}
   _generatonDirection: 0
-  _updateFrequencyInSeconds: 1
+  _updateFrequencyInSeconds: 0.1
   _availablePlants:
-  - _parameters: {fileID: 11400000, guid: aca6e4c888ceea24bbd5cec8c0e5ac91, type: 2}
-  - _parameters: {fileID: 11400000, guid: 8e58902aaec304043af5e7d2ace561b3, type: 2}
-  - _parameters: {fileID: 11400000, guid: a883fc662b2dc3249b190f2adf52bf8c, type: 2}
-  - _parameters: {fileID: 11400000, guid: b661265e2f2102d4c8ebcba4f95d0e4d, type: 2}
+  - {fileID: 11400000, guid: aca6e4c888ceea24bbd5cec8c0e5ac91, type: 2}
+  - {fileID: 11400000, guid: 8e58902aaec304043af5e7d2ace561b3, type: 2}
+  - {fileID: 11400000, guid: a883fc662b2dc3249b190f2adf52bf8c, type: 2}
+  - {fileID: 11400000, guid: b661265e2f2102d4c8ebcba4f95d0e4d, type: 2}

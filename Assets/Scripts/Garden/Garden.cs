@@ -14,7 +14,7 @@ public class Garden : ScriptableObject
     [Header("Growing")]
     [SerializeField] private float _updateFrequencyInSeconds = 1f;
     [Header("Plants")]
-    [SerializeField] private List<Plant> _availablePlants = new List<Plant>();
+    [SerializeField] private List<PlantParameters> _availablePlants = new List<PlantParameters>();
 
     public GenerationDirection GeneratonDirection => _generatonDirection;
     public GameObject TilePrefab => _tilePrefab;
@@ -26,6 +26,6 @@ public class Garden : ScriptableObject
     public Plant PickRandomPlant()
     {
         int randomIndex = UnityEngine.Random.Range(0, _availablePlants.Count);
-        return _availablePlants[randomIndex];
+        return new Plant(_availablePlants[randomIndex]);
     }
 }

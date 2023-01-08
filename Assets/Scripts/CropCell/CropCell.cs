@@ -159,8 +159,7 @@ public class CropCell : MonoBehaviour
     /// </summary>
     public void Kill()
     {
-        UnRegisterPlant();
-        _hostedPlant = null;
+        RemovePlant();
         UpdateCropState(CropState.dead);
     }
     #endregion Lifecycle
@@ -190,10 +189,9 @@ public class CropCell : MonoBehaviour
     #region Speed run gameplay
     public void Harvest()
     {
-        UnRegisterPlant();
-        _hostedPlant = null;
         _hostedPlant.TimeSpentAlive = 0.0F;
         _hostedPlant.HarvestCount++;
+        _hostedPlant.State = 0;
         // TODO
 
         if (_isCut != null)
@@ -243,12 +241,16 @@ public class CropCell : MonoBehaviour
     {
         _hostedPlant.PlantSpriteRenderer = _plantSpriteRenderer;
         IsBury += _hostedPlant.UpdateSprite;
+        IsCut += _hostedPlant.UpdateSprite;
         PlantEvolved += _hostedPlant.UpdateSpriteOnEvo;
     }
 
-    private void UnRegisterPlant()
+    private void RemovePlant()
     {
         IsBury -= _hostedPlant.UpdateSprite;
+        IsCut += _hostedPlant.UpdateSprite;
         PlantEvolved -= _hostedPlant.UpdateSpriteOnEvo;
+        _plantSpriteRenderer.sprite = null;
+        _hostedPlant = null;
     }
 }

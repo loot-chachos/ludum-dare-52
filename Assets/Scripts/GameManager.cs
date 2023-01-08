@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
             StartGame();
         }
 #endif // UNITY_EDITOR
+        _grid?.Update();
     }
 
     public void StartGame()

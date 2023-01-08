@@ -21,7 +21,7 @@ public class Plant
     public SpriteRenderer PlantSpriteRenderer { get; internal set; }
     #endregion Runtime variables
 
-    public Plant()
+    public Plant(PlantParameters plantParameters)
     {
         State = PlantState.Underground;
         TimeSpentAlive = 0.0F;
@@ -29,10 +29,13 @@ public class Plant
         FertilizeCount = 0;
         HarvestCount = 0;
         StoleByAnimalsCount = 0;
+        _parameters = plantParameters;
     }
 
     public bool CanEvolve()
     {
+        if ((int)(State) + 1 >= _parameters.Evolutions.Count)
+            return false;
         PlantEvolution nextEvolution = _parameters.Evolutions[(int)(State) + 1];
         return nextEvolution.TimeReachBeforeEvolve <= TimeSpentAlive
             && nextEvolution.WateredNeedToEvolve <= WateredCount

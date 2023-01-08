@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class Grid
 {
     // Static settings
@@ -131,7 +132,7 @@ public class Grid
         _crops[cellIndex].Bury(plant);
     }    
 
-    void Update()
+    public void Update()
     {
         _currentTimer += Time.deltaTime;
         if (_isGridActive)
@@ -140,7 +141,7 @@ public class Grid
             {
                 for (int i = 0; i < _crops.Length; i++)
                 {
-                    _crops[i].UpdateCrop(_currentTimer);
+                    _crops[i]?.UpdateCrop(_currentTimer);
                 }
 
                 _currentTimer = 0.0f;
