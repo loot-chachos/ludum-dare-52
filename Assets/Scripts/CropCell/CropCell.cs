@@ -206,6 +206,9 @@ public class CropCell : MonoBehaviour, IEatable
     #region Peaceful gameplay
     public void Watered()
     {
+#if UNITY_EDITOR
+        Debug.Log($"Crop {_cellIndex} is being watered");
+#endif
         _timeRemainingBeforeDeadCrop = _wateredDuration;
         if (_hostedPlant == null)
         {
@@ -232,9 +235,9 @@ public class CropCell : MonoBehaviour, IEatable
             _isMoved();
         }
     }
-    #endregion Peaceful gameplay
+#endregion Peaceful gameplay
 
-    #region Speed run gameplay
+#region Speed run gameplay
     public void Stolen()
     {
         _hostedPlant.TimeSpentAlive = 0.0F;
@@ -278,8 +281,14 @@ public class CropCell : MonoBehaviour, IEatable
 
     public void Fertilize()
     {
-        // TODO
-        if (_hostedPlant != null)
+        if (_hostedPlant == null)
+        {
+            return;
+        }
+
+        _hostedPlant.FertilizeCount++;
+
+        if (_isFertilize != null)
         {
             GameManager.Instance.WorldEvolutionManager.OnUseFertilizer();
             _hostedPlant.FertilizeCount++;
