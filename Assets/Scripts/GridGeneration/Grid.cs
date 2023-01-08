@@ -145,7 +145,7 @@ public class Grid
             parent);
     }
 
-    public void SeedPlant(int cellIndex, Plant plant = null)
+    public void SeedFirstPlant(int cellIndex, Plant plant = null)
     {
         _isGridActive = true;
         if (plant == null)
@@ -155,6 +155,26 @@ public class Grid
         }
 
         _crops[cellIndex].Bury(plant);
+        _crops[cellIndex].Watered();
+
+        // Watered the adjacent tile to show the mecanics.
+        int cellX = (int)(cellIndex / _garden.Size.y);
+        int cellY = (int)(cellIndex % _garden.Size.y);
+
+        // Clamp future values
+        int previousXCell = Mathf.Clamp(cellX - 2, 0, (int)_garden.Size.x);
+        int nextCellX = Mathf.Clamp(cellX + 2, 0, (int)_garden.Size.x);
+        int previousYCell = Mathf.Clamp(cellY - 2, 0, (int)_garden.Size.y);
+        int nextCellY = Mathf.Clamp(cellY + 2, 0, (int)_garden.Size.y);
+
+        for (int i = previousXCell; i <= nextCellX; i++)
+        {
+            for (int j = previousYCell; j <= nextCellY; j++)
+            {
+                int cropIndex = i * (int)_garden.Size.y + j;
+                _crops[cropIndex].Watered(30 / Mathf.Max(1, (Mathf.Abs(cellX - i) * Mathf.Abs(cellY - j))));
+            }
+        }
     }
 
     public void Update()

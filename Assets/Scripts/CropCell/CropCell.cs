@@ -166,7 +166,6 @@ public class CropCell : MonoBehaviour, IEatable
                 if (_hostedPlant.State == 0)
                 {
                     _hostedPlant.TimeSpentAlive = 0.0F;
-                    _hostedPlant = null;
                 }
             }
         }
@@ -207,12 +206,17 @@ public class CropCell : MonoBehaviour, IEatable
     #endregion Lifecycle
 
     #region Peaceful gameplay
-    public void Watered()
+    public void Watered(float overrideWateredDuration = 0.0f)
     {
 #if UNITY_EDITOR
         Debug.Log($"Crop {_cellIndex} is being watered");
 #endif
         _timeRemainingBeforeDeadCrop = _wateredDuration;
+        if (overrideWateredDuration > 0)
+        {
+            _timeRemainingBeforeDeadCrop = overrideWateredDuration;
+        }
+        
         UpdateCropState(CropState.fertile);
         if (_hostedPlant != null)
         {

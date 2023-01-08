@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FinalGarden
   m_EditorClassIdentifier: 
   _tilePrefab: {fileID: 5812976468972463041, guid: 7a0fc8ee18e49cb4db1d0eab9046626a, type: 3}
-  _gridSize: {x: 12, y: 4}
+  _gridSize: {x: 12, y: 5}
   _cropPadding: {x: 1, y: 1}
   _startingPos: {x: -8, y: -27}
   _generatonDirection: 0
