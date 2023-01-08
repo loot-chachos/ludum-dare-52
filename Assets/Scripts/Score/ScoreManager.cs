@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private float _currentCachet = 0.0f;
     [SerializeField] private float _currentMoney = 0.0f;
 
+    [SerializeField] private CanvasGroup _canvasGroup = null;
     [SerializeField] private TextMeshProUGUI _cachetText = null;
     [SerializeField] private TextMeshProUGUI _moneyText = null;
 
@@ -21,6 +22,20 @@ public class ScoreManager : MonoBehaviour
 
     private Coroutine _moneyScoreCoroutine = null;
     private Coroutine _cachetScoreCoroutine = null;
+
+    public void Show()
+    {
+        _canvasGroup.alpha = 1.0f;
+        _canvasGroup.blocksRaycasts = true;
+        _canvasGroup.interactable = true;
+    }
+
+    public void Hide()
+    {
+        _canvasGroup.alpha = 0.0f;
+        _canvasGroup.blocksRaycasts = false;
+        _canvasGroup.interactable = false;
+    }
 
     public void OnMoneyAdded(float money)
     {

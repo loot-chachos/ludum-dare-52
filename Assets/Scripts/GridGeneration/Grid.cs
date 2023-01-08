@@ -98,6 +98,14 @@ public class Grid
             _isCropMoved -= value;
         }
     }
+
+    internal void ActivateGrid()
+    {
+        for (int i = 0; i < _crops.Length; i++)
+        {
+            _crops[i].Initiliaze();
+        }
+    }
     #endregion Events
 
     public Grid(Garden garden)
@@ -134,6 +142,11 @@ public class Grid
 
     public void Update()
     {
+        if (GameManager.Instance.HasStarted == false)
+        {
+            return;
+        }
+
         _currentTimer += Time.deltaTime;
         if (_isGridActive)
         {

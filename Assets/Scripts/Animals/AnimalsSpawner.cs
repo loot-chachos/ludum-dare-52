@@ -6,7 +6,15 @@ public class AnimalsSpawner : MonoBehaviour
 {
     [SerializeField] private List<Animal> _animalPrefabs = null;
     [SerializeField] private AnimalsSpawnParameters _animalSpawnParameters = null;
+    
     private float _timer = 0.0f;
+    private List<GameObject> _animalSpawned = null;
+
+    private void Start()
+    {
+        _animalSpawned = new List<GameObject>();
+    }
+
     private void Update()
     {
         if (GameManager.Instance.IsGamePaused)
@@ -51,6 +59,7 @@ public class AnimalsSpawner : MonoBehaviour
         }
         int randomIndex = Random.Range(0, _animalPrefabs.Count);
         Animal animal = Instantiate(_animalPrefabs[randomIndex], spawnPoint, Quaternion.identity, transform);
+        _animalSpawned.Add(animal.gameObject);
 
         CropCell crop = GameManager.Instance.Grid.FindRandomCropAtLeastState(PlantState.Maturity);
         if (crop == null)
@@ -58,5 +67,13 @@ public class AnimalsSpawner : MonoBehaviour
             crop = GameManager.Instance.Grid.FindRandomCropAtLeastState(PlantState.Underground);
         }
         animal.StartMovement(crop);
+    }
+
+    public void Clean()
+    {
+        foreach (var animal in _animalSpawned)
+        {
+            Destroy(animal);
+        }
     }
 }

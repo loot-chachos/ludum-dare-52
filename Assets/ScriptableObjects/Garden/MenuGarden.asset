@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 930b563a77149f9448ade1640af6d839, type: 3}
-  m_Name: Garden
+  m_Name: MenuGarden
   m_EditorClassIdentifier: 
-  _tilePrefab: {fileID: 5812976468972463041, guid: 7a0fc8ee18e49cb4db1d0eab9046626a, type: 3}
-  _gridSize: {x: 12, y: 4}
+  _tilePrefab: {fileID: 5812976468972463041, guid: 604940e76951e8540873adff4a98b3b9, type: 3}
+  _gridSize: {x: 18, y: 10}
   _cropPadding: {x: 1, y: 1}
-  _startingPos: {x: -8, y: -26}
+  _startingPos: {x: -8, y: -4}
   _generatonDirection: 0
   _updateFrequencyInSeconds: 0.1
   _availablePlants:

@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager Instance;
 
+    [Header("Managers")]
     [SerializeField] private MenuManager _menuManager = null;
     [SerializeField] private ScoreManager _scoreManager = null;
     [SerializeField] private WorldEvolutionManager _worldEvolutionManager = null;
+    [SerializeField] private AnimalsSpawner _animalSpawner = null;
+
+    [Header("Others")]
+    [SerializeField] private Transform _gameView = null;
+    [SerializeField] private Garden _menuGardenSettings = null;
     [SerializeField] private Garden _gardenSettings = null;
     [SerializeField] private SeedsGrid _seedsGrid = null;
     [SerializeField] private Hand _hand = null;
 
+    private TransitionManager _transitionManager = null;
     private bool _isPlaying = false;
     private bool _isPaused = false;
     private Grid _grid = null;
-    private GameObject _gridRoot = null;
+    private GameObject _menuGridRoot = null;
+    private GameObject _gameplayGridRoot = null;
 
     public WorldEvolutionManager WorldEvolutionManager { get => _worldEvolutionManager; }
     public ScoreManager ScoreManager { get => _scoreManager; }
@@ -38,14 +45,25 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        _transitionManager = new TransitionManager();
     }
 
     private void Start()
     {
-        InitGridRoot();
+        // Destroy gameplay grid if any
+        if (_gameplayGridRoot != null)
+        {
+            Destroy(_gameplayGridRoot);
+        }
+
+        // Init real gameplay grid.
+        _menuGridRoot = new GameObject();
+        _menuGridRoot.name = "MenuGrid";
+
         // Spawn menu grid to allow animal spawn
-        _grid = new Grid(_gardenSettings);
-        _grid.InitializeGrid(_gridRoot.transform);
+        _grid = new Grid(_menuGardenSettings);
+        _grid.InitializeGrid(_menuGridRoot.transform);
     }
 
     public void Update()
@@ -56,38 +74,53 @@ public class GameManager : MonoBehaviour
             StartGame();
         }
 #endif // UNITY_EDITOR
-        _grid?.Update();
+
+        if (_isPlaying)
+        {
+            _grid?.Update();
+        }
     }
 
     public void StartGame()
     {
-        InitGridRoot();
+        // Init real gameplay grid.
+        _gameplayGridRoot = new GameObject();
+        _gameplayGridRoot.name = "GameplayGrid";
 
+        // Plant grid
         _grid = new Grid(_gardenSettings);
-        _grid.InitializeGrid(_gridRoot.transform);
+        _grid.InitializeGrid(_gameplayGridRoot.transform);
         _grid.SeedPlant(5);
         //_grid.SeedPlant(4);
         //_grid.SeedPlant(2);
         //_grid.SeedPlant(7);
+
+        // Food for animals grid
         _seedsGrid.SpawnGrid();
 
-        _isPlaying = true;
+        _transitionManager.IsTransitionFinished += OnIntroTransitionFinished;
+        _transitionManager.StartIntroTransition(_gameView.position);
     }
 
-    private void InitGridRoot()
+    private void OnIntroTransitionFinished()
     {
+        _animalSpawner.Clean();
         // Destroy menu grid
-        if (_gridRoot != null)
+        if (_menuGridRoot != null)
         {
-            Destroy(_gridRoot);
+            Destroy(_menuGridRoot);
         }
+        
+        _grid.ActivateGrid();
 
-        _gridRoot = new GameObject();
-        _gridRoot.name = "GardenGrid";
+        _scoreManager.Show();
+        _transitionManager.IsTransitionFinished -= OnIntroTransitionFinished;
+        _isPlaying = true;
     }
 
     public void EndGame(bool isWin)
     {
+        _scoreManager.Hide();
         _isPlaying = false;
         if (isWin)
         {

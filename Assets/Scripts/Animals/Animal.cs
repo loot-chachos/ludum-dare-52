@@ -30,7 +30,7 @@ public class Animal : MonoBehaviour
 
     private void Update()
     {
-        if (Vector2.Distance(_targetFlower.transform.position, transform.position) < 0.2f)
+        if (Vector2.Distance(_targetFlower.transform.position, transform.position) < 0.2f)  
         {
             _targetFlower.Stolen();
         }
