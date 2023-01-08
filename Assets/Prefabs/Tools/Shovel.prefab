@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3952556441030759742
+--- !u!1001 &7270298896398694875
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,28 +8,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2225944353777118974, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 121079344, guid: 6c2d1967de649e54cbad6efe10c5129b, type: 3}
-    - target: {fileID: 3843742555656837564, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -967639817, guid: 6f91aa7e8777405448848fff419ca46c, type: 3}
-    - target: {fileID: 3843742555656837564, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
-      propertyPath: m_WasSpriteAssigned
+      propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2225944353777118974, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2022431736, guid: 0f5dda63e7320b14d88a1cd6c1592e3b, type: 3}
     - target: {fileID: 4393733137035052724, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4393733137035052724, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4393733137035052724, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4393733137035052724, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41,15 +37,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4393733137035052724, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4393733137035052724, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4393733137035052724, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4393733137035052724, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -63,31 +59,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6519812942062994880, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8534277149804298040, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
       propertyPath: m_Name
-      value: Seeder
+      value: Shovel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
---- !u!1 &4662803404228356614 stripped
+--- !u!1 &1336053457413687011 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8534277149804298040, guid: e123d255b2d675544be210e6df8a42c1, type: 3}
-  m_PrefabInstance: {fileID: 3952556441030759742}
+  m_PrefabInstance: {fileID: 7270298896398694875}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3442869058280106248
+--- !u!114 &2490189196812560123
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4662803404228356614}
+  m_GameObject: {fileID: 1336053457413687011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1765c687766468449800cfce1577462, type: 3}
+  m_Script: {fileID: 11500000, guid: 54558eb6336528649866c6ba43c9eada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHoldDuration: 1

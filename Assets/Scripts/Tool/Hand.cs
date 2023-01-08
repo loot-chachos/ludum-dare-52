@@ -27,30 +27,41 @@ public class Hand : MonoBehaviour
 
     private void OnMouseClick()
     {
-        Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 0.1f, _clickableLayer);
-        for (int i = 0; i < collider.Length; i++)
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f, _clickableLayer);
+        for (int i = 0; i < colliders.Length; i++)
         {
-            if (collider[i].TryGetComponent(out Tool tool))
+            if (colliders[i].TryGetComponent(out Tool tool))
+            {
+                if (_grabbedTool == tool && _grabbedTool is CropTool cropTool)
+                {
+                    UnityEngine.Debug.Log(_grabbedTool);
+                    foreach (Collider2D collider in colliders)
+                    {
+                        UnityEngine.Debug.Log(collider);
+                        if (collider.TryGetComponent(out CropCell cell))
+                        {
+                            UnityEngine.Debug.Log(cell);
+                            cropTool.UseTool(cell);
+                            return;
+                        }
+                    }
+                    cropTool.UseTool(null);
+                    return;
+                }
+
+                tool.ClickTool();
+            }
+            else if (colliders[i].TryGetComponent(out CropCell cell))
             {
                 if (_grabbedTool == null)
                 {
-                    tool.ClickTool();
-                    return;
+                    cell.Harvest();
                 }
             }
-            else if (collider[i].TryGetComponent(out CropCell cell))
-            {
-                cell.Harvest();
-            }
-            else if (collider[i].TryGetComponent(out Animal animal))
+            else if (colliders[i].TryGetComponent(out Animal animal))
             {
                 animal.Kill();
             }
-        }
-        
-        if (_grabbedTool)
-        {
-            _grabbedTool.ClickTool();
         }
     }
 
