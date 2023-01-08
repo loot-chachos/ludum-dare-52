@@ -9,7 +9,7 @@ public class SeedsGrid : MonoBehaviour
     [SerializeField] private Vector2 _cropPadding = new Vector2(1, 1);
     [SerializeField] private Vector2 _startingPos = new Vector2(0, 0);
     [SerializeField] private GenerationDirection _generatonDirection = GenerationDirection.NorthEast;
-    private Seed[] _seeds = new Seed[1];
+    private Seed[] _seeds = new Seed[0];
 
     public void SpawnGrid()
     {

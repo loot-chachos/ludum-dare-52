@@ -314,6 +314,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 927358527, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: _animalSpawnParameters
+      value: 
+      objectReference: {fileID: 11400000, guid: 555053636c8e0eb429b1665d5ef187cf, type: 2}
+    - target: {fileID: 927358527, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: _menuAnimalSpawnParameters
+      value: 
+      objectReference: {fileID: 11400000, guid: 68bf8645c54749649bef67b0a5253645, type: 2}
+    - target: {fileID: 30494491732650161, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: _startingPos.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1645802467816317650, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: _gardenSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 739c82b054e4b5f44b661f5c50164ced, type: 2}
     - target: {fileID: 2257504967077998997, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

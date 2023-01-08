@@ -244,7 +244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4330846034118885125
 RectTransform:
   m_ObjectHideFlags: 0
@@ -327,7 +327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6768460068944552384
 RectTransform:
   m_ObjectHideFlags: 0
@@ -578,6 +578,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4590126697889641476}
     m_Modifications:
+    - target: {fileID: 1962659611966833406, guid: 58defb964da40c44ba07453c7c5a6e54, type: 3}
+      propertyPath: m_fontSize
+      value: 86.95
+      objectReference: {fileID: 0}
     - target: {fileID: 3135585427471133712, guid: 58defb964da40c44ba07453c7c5a6e54, type: 3}
       propertyPath: m_Name
       value: StartButton
@@ -1054,6 +1058,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 1962659611966833406, guid: 58defb964da40c44ba07453c7c5a6e54, type: 3}
+      propertyPath: m_fontSize
+      value: 86.95
+      objectReference: {fileID: 0}
     - target: {fileID: 3135585427471133712, guid: 58defb964da40c44ba07453c7c5a6e54, type: 3}
       propertyPath: m_Name
       value: Quit
@@ -1194,7 +1202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1962659611966833406, guid: 58defb964da40c44ba07453c7c5a6e54, type: 3}
       propertyPath: m_fontSize
-      value: 83.7
+      value: 86.95
       objectReference: {fileID: 0}
     - target: {fileID: 3135585427471133712, guid: 58defb964da40c44ba07453c7c5a6e54, type: 3}
       propertyPath: m_Name
@@ -1336,7 +1344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1962659611966833406, guid: 58defb964da40c44ba07453c7c5a6e54, type: 3}
       propertyPath: m_fontSize
-      value: 83.7
+      value: 86.95
       objectReference: {fileID: 0}
     - target: {fileID: 3135585427471133712, guid: 58defb964da40c44ba07453c7c5a6e54, type: 3}
       propertyPath: m_Name

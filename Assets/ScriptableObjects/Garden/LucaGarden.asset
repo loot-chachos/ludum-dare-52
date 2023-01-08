@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 930b563a77149f9448ade1640af6d839, type: 3}
+  m_Name: LucaGarden
+  m_EditorClassIdentifier: 
+  _tilePrefab: {fileID: 5812976468972463041, guid: 7a0fc8ee18e49cb4db1d0eab9046626a, type: 3}
+  _gridSize: {x: 12, y: 4}
+  _cropPadding: {x: 1, y: 1}
+  _startingPos: {x: -8, y: -4}
+  _generatonDirection: 0
+  _updateFrequencyInSeconds: 0.1
+  _availablePlants:
+  - {fileID: 11400000, guid: b661265e2f2102d4c8ebcba4f95d0e4d, type: 2}

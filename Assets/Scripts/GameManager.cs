@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager Instance;
 
+    [Header("Managers")]
     [SerializeField] private MenuManager _menuManager = null;
     [SerializeField] private ScoreManager _scoreManager = null;
     [SerializeField] private WorldEvolutionManager _worldEvolutionManager = null;
+    [SerializeField] private AnimalsSpawner _animalSpawner = null;
+
+    [Header("Others")]
+    [SerializeField] private Vector3 _gameViewPosition = Vector3.zero;
+    [SerializeField] private Garden _menuGardenSettings = null;
     [SerializeField] private Garden _gardenSettings = null;
     [SerializeField] private SeedsGrid _seedsGrid = null;
     [SerializeField] private Hand _hand = null;
 
+    private TransitionManager _transitionManager = null;
     private bool _isPlaying = false;
     private bool _isPaused = false;
     private Grid _grid = null;
-    private GameObject _gridRoot = null;
+    private GameObject _menuGridRoot = null;
+    private GameObject _gameplayGridRoot = null;
 
     public WorldEvolutionManager WorldEvolutionManager { get => _worldEvolutionManager; }
     public ScoreManager ScoreManager { get => _scoreManager; }
@@ -27,6 +34,13 @@ public class GameManager : MonoBehaviour
     public Grid Grid { get => _grid;}
     public SeedsGrid SeedsGrid { get => _seedsGrid; }
     public Hand Hand { get => _hand; }
+    public Vector3 GameViewCenter
+    {
+        get
+        {
+            return HasStarted ? new Vector3(_gameViewPosition.x, _gameViewPosition.y, 0) : Vector3.zero;
+        }
+    }
 
     void Awake()
     {
@@ -38,14 +52,25 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        _transitionManager = new TransitionManager();
     }
 
     private void Start()
     {
-        InitGridRoot();
+        // Destroy gameplay grid if any
+        if (_gameplayGridRoot != null)
+        {
+            Destroy(_gameplayGridRoot);
+        }
+
+        // Init real gameplay grid.
+        _menuGridRoot = new GameObject();
+        _menuGridRoot.name = "MenuGrid";
+
         // Spawn menu grid to allow animal spawn
-        _grid = new Grid(_gardenSettings);
-        _grid.InitializeGrid(_gridRoot.transform);
+        _grid = new Grid(_menuGardenSettings);
+        _grid.InitializeGrid(_menuGridRoot.transform);
     }
 
     public void Update()
@@ -56,38 +81,55 @@ public class GameManager : MonoBehaviour
             StartGame();
         }
 #endif // UNITY_EDITOR
-        _grid?.Update();
+
+        if (_isPlaying)
+        {
+            _grid?.Update();
+        }
     }
 
     public void StartGame()
     {
-        InitGridRoot();
+        // Init real gameplay grid.
+        _gameplayGridRoot = new GameObject();
+        _gameplayGridRoot.name = "GameplayGrid";
 
+        // Plant grid
         _grid = new Grid(_gardenSettings);
-        _grid.InitializeGrid(_gridRoot.transform);
+        _grid.InitializeGrid(_gameplayGridRoot.transform);
         _grid.SeedPlant(5);
         //_grid.SeedPlant(4);
         //_grid.SeedPlant(2);
         //_grid.SeedPlant(7);
+
+        // Food for animals grid
         _seedsGrid.SpawnGrid();
+
+        _transitionManager.IsTransitionFinished += OnIntroTransitionFinished;
+        _transitionManager.StartIntroTransition(_gameViewPosition);
+    }
+
+    private void OnIntroTransitionFinished()
+    {
+        _transitionManager.IsTransitionFinished -= OnIntroTransitionFinished;
+
+        _animalSpawner.Clean();
+        // Destroy menu grid
+        if (_menuGridRoot != null)
+        {
+            Destroy(_menuGridRoot);
+        }
+
+        _animalSpawner.OnStartGame();
+        _grid.ActivateGrid();
+        _scoreManager.Show();
 
         _isPlaying = true;
     }
 
-    private void InitGridRoot()
-    {
-        // Destroy menu grid
-        if (_gridRoot != null)
-        {
-            Destroy(_gridRoot);
-        }
-
-        _gridRoot = new GameObject();
-        _gridRoot.name = "GardenGrid";
-    }
-
     public void EndGame(bool isWin)
     {
+        _scoreManager.Hide();
         _isPlaying = false;
         if (isWin)
         {

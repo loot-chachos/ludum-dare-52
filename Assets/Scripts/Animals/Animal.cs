@@ -65,7 +65,7 @@ public class Animal : MonoBehaviour
             }
         }
 
-        if (transform.position.sqrMagnitude > _destroyDistanceFromCenter * _destroyDistanceFromCenter)
+        if ((GameManager.Instance.GameViewCenter - transform.position).sqrMagnitude > _destroyDistanceFromCenter * _destroyDistanceFromCenter)
         {
             Destroy(gameObject);
         }

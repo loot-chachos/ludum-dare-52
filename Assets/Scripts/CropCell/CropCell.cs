@@ -111,7 +111,7 @@ public class CropCell : MonoBehaviour, IEatable
         _hostedPlant = null;
     }
 
-    private void Awake()
+    public void Initiliaze()
     {
         UpdateCropState(CropState.blank);
     }

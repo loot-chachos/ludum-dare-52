@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23678f67f86733546ba2b1332643ad6a, type: 3}
-  m_Name: AnimalsSpawnParameters
+  m_Name: LucaAnimalsSpawnParameters
   m_EditorClassIdentifier: 
   SpawnRateByWorldEvolutionPercent:
     serializedVersion: 2
@@ -45,6 +45,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  MinSpawnPoint: {x: -10, y: -60}
-  MaxSpawnPoint: {x: 10, y: -19}
+  MinSpawnPoint: {x: -10, y: -6}
+  MaxSpawnPoint: {x: 10, y: 6}
   SeedSpawnMultiplier: 0.1
