@@ -124,6 +124,6 @@ public class Hand : MonoBehaviour
         _grabbedTool?.Release();
         // Assign new one
         _grabbedTool = tool;
-        _grabbedTool.Grap();
+        _grabbedTool?.Grap();
     }
 }
