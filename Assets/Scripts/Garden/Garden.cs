@@ -13,6 +13,7 @@ public class Garden : ScriptableObject
 
     [Header("Growing")]
     [SerializeField] private float _updateFrequencyInSeconds = 1f;
+    [SerializeField] private float _wateredDuration = 5.0f;
     [Header("Plants")]
     [SerializeField] private List<PlantParameters> _availablePlants = new List<PlantParameters>();
 
@@ -22,6 +23,7 @@ public class Garden : ScriptableObject
     public Vector2 Size => _gridSize;
     public Vector2 CropPadding => _cropPadding;
     public float UpdateFrequencyInSeconds => _updateFrequencyInSeconds;
+    public float WateredDuration => _wateredDuration;
 
     public Plant PickRandomPlant()
     {

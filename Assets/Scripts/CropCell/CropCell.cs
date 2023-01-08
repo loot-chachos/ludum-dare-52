@@ -6,7 +6,6 @@ using UnityEngine;
 public class CropCell : MonoBehaviour, IEatable
 {
     #region Fields
-    [SerializeField] private CropState _state = CropState.blank;
     [SerializeField] private SpriteRenderer _soilSpriteRenderer;
     [SerializeField] private SpriteRenderer _plantSpriteRenderer;
 
@@ -15,11 +14,15 @@ public class CropCell : MonoBehaviour, IEatable
     [SerializeField] private Sprite _deadSprite = null;
     #endregion Fields
 
+    private CropState _state = CropState.blank;
     private Plant _hostedPlant = null;
     private int _cellIndex = -1;
+    private float _timeRemainingBeforeDeadCrop = 0.0f;
+    // Settings
+    private float _wateredDuration = 0.0f;
 
+    public float TimeRemainingBeforeDeadCrop => _timeRemainingBeforeDeadCrop;
     public float TimeAlive => _hostedPlant.TimeSpentAlive;
-
     public Plant HostedPlant { get => _hostedPlant;}
     public CropState State { get => _state;}
 
@@ -108,20 +111,16 @@ public class CropCell : MonoBehaviour, IEatable
     #endregion Events
 
     #region Lifecycle
-    public CropCell(int cellIndex)
-    {
-        _hostedPlant = null;
-        SetIndex(cellIndex);
-    }
-
     public void SetIndex(int index)
     {
         _hostedPlant = null;
         _cellIndex = index;
     }
 
-    public void Initiliaze()
+    public void Initiliaze(float wateredDuration)
     {
+        _wateredDuration = wateredDuration;
+        _timeRemainingBeforeDeadCrop = _wateredDuration;
         UpdateCropState(CropState.blank);
     }
 
@@ -135,15 +134,37 @@ public class CropCell : MonoBehaviour, IEatable
             return;
         }
 
-        _hostedPlant.TimeSpentAlive += additionalTime;
-
-        if (_hostedPlant.CanEvolve())
+        _timeRemainingBeforeDeadCrop -= additionalTime;
+        if (_timeRemainingBeforeDeadCrop <= 0.0f)
         {
-            _hostedPlant.Evolve();
-            if (_plantEvolved != null)
+            UpdateCropState(CropState.dead);
+        }
+
+        if (_hostedPlant != null)
+        {
+            _hostedPlant.TimeSpentAlive += additionalTime;
+
+            if (_state == CropState.fertile)
             {
-                // Send the current state which is new
-                _plantEvolved(_hostedPlant.State, _hostedPlant.CurrentEvolution);
+                if (_hostedPlant.CanEvolve())
+                {
+                    _hostedPlant.Evolve();
+                    if (_plantEvolved != null)
+                    {
+                        // Send the current state which is new
+                        _plantEvolved(_hostedPlant.State, _hostedPlant.CurrentEvolution);
+                    }
+                }
+            }
+            else
+            {
+                // De-evolve
+                _hostedPlant.Regress();
+                if (_hostedPlant.State == 0)
+                {
+                    _hostedPlant.TimeSpentAlive = 0.0F;
+                    _hostedPlant = null;
+                }
             }
         }
     }
@@ -173,7 +194,7 @@ public class CropCell : MonoBehaviour, IEatable
     }
 
     /// <summary>
-    /// When the crop cannot host a plant anymore. It is dead. (tumbstone ?)
+    /// When the crop cannot host a plant anymore. It is dead.
     /// </summary>
     public void Kill()
     {
@@ -185,7 +206,15 @@ public class CropCell : MonoBehaviour, IEatable
     #region Peaceful gameplay
     public void Watered()
     {
-        _hostedPlant.WateredCount++;
+        _timeRemainingBeforeDeadCrop = _wateredDuration;
+        if (_hostedPlant == null)
+        {
+            UpdateCropState(CropState.fertile);
+        }
+        else
+        {
+            _hostedPlant.WateredCount++;
+        }
 
         if (_isWatered != null)
         {
@@ -270,7 +299,6 @@ public class CropCell : MonoBehaviour, IEatable
                 break;
             case CropState.dead:
                 {
-                    _plantSpriteRenderer.sprite = null;
                     _soilSpriteRenderer.sprite = _deadSprite;
                 }
                 break;

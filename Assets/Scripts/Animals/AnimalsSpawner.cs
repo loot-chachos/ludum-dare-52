@@ -72,6 +72,11 @@ public class AnimalsSpawner : MonoBehaviour
         if (seed == null && crop == null)
         {
             crop = GameManager.Instance.Grid.FindRandomCropAtLeastState(PlantState.Underground);
+            if (crop == null)
+            {
+                crop = GameManager.Instance.Grid.FindRandomCrop();
+            }
+
             animal.StartMovement(crop);
         }
         else if (seed == null)
