@@ -53,8 +53,8 @@ public class CropCell : MonoBehaviour, IEatable
         }
     }
 
-    private Action<PlantState, PlantEvolution> _plantEvolved = null;
-    public event Action<PlantState, PlantEvolution> PlantEvolved
+    private Action _plantEvolved = null;
+    public event Action PlantEvolved
     {
         add
         {
@@ -152,7 +152,7 @@ public class CropCell : MonoBehaviour, IEatable
                     if (_plantEvolved != null)
                     {
                         // Send the current state which is new
-                        _plantEvolved(_hostedPlant.State, _hostedPlant.CurrentEvolution);
+                        _plantEvolved();
                     }
                 }
             }
@@ -258,6 +258,13 @@ public class CropCell : MonoBehaviour, IEatable
             return;
         }
 
+        // Don't harvet immature plant
+        if (_hostedPlant.State < PlantState.Maturity)
+        {
+            return;
+        }
+
+        GameManager.Instance.ScoreManager.OnMoneyAdded(_hostedPlant.CurrentEvolution.ScoreGivenWhenHarvest);
         _hostedPlant.TimeSpentAlive = 0.0F;
         _hostedPlant.HarvestCount++;
         _hostedPlant.State = 0;
@@ -272,11 +279,15 @@ public class CropCell : MonoBehaviour, IEatable
     public void Fertilize()
     {
         // TODO
-        _hostedPlant.FertilizeCount++;
-
-        if (_isFertilize != null)
+        if (_hostedPlant != null)
         {
-            _isFertilize();
+            GameManager.Instance.WorldEvolutionManager.OnUseFertilizer();
+            _hostedPlant.FertilizeCount++;
+
+            if (_isFertilize != null)
+            {
+                _isFertilize();
+            }
         }
     }
 #endregion Speed run gameplay
@@ -310,7 +321,7 @@ public class CropCell : MonoBehaviour, IEatable
         _hostedPlant.PlantSpriteRenderer = _plantSpriteRenderer;
         IsBury += _hostedPlant.UpdateSprite;
         IsCut += _hostedPlant.UpdateSprite;
-        PlantEvolved += _hostedPlant.UpdateSpriteOnEvo;
+        PlantEvolved += _hostedPlant.UpdateSprite;
     }
 
     private void RemovePlant()
@@ -319,7 +330,7 @@ public class CropCell : MonoBehaviour, IEatable
         {
             IsBury -= _hostedPlant.UpdateSprite;
             IsCut -= _hostedPlant.UpdateSprite;
-            PlantEvolved -= _hostedPlant.UpdateSpriteOnEvo;
+            PlantEvolved -= _hostedPlant.UpdateSprite;
         }
         _plantSpriteRenderer.sprite = null;
         _hostedPlant = null;

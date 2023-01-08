@@ -8,7 +8,10 @@ public class Fertilizer : DraggableTool
     {
         if (collision.TryGetComponent(out CropCell crop))
         {
-            crop.Fertilize();
+            if (GameManager.Instance.HasStarted)
+            {
+                crop.Fertilize();
+            }
         }
     }
 }

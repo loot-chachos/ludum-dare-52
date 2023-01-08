@@ -15,14 +15,14 @@ MonoBehaviour:
   _name: 
   _evolutions:
   - _visual: {fileID: -396630823, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
-    _cachetGiven: 10
-    _scoreGivenWhenHarvest: 10
+    _cachetGiven: 0
+    _scoreGivenWhenHarvest: 0
     _timeReachBeforeEvolve: 5
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 0
   - _visual: {fileID: -998260935, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
-    _cachetGiven: 10
-    _scoreGivenWhenHarvest: 10
+    _cachetGiven: 0
+    _scoreGivenWhenHarvest: 0
     _timeReachBeforeEvolve: 10
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 0
@@ -37,11 +37,11 @@ MonoBehaviour:
     _scoreGivenWhenHarvest: 10
     _timeReachBeforeEvolve: 20
     _wateredNeedToEvolve: 0
-    _stolenCountToEvolve: 0
+    _stolenCountToEvolve: 1
   - _visual: {fileID: -2135287963, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
     _cachetGiven: 10
     _scoreGivenWhenHarvest: 10
     _timeReachBeforeEvolve: 25
     _wateredNeedToEvolve: 0
-    _stolenCountToEvolve: 0
+    _stolenCountToEvolve: 2
   _growSpeed: 1

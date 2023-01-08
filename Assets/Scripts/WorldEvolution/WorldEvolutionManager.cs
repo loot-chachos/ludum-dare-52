@@ -34,9 +34,9 @@ public class WorldEvolutionManager : MonoBehaviour
     }
 
     [ContextMenu("OnUseFertilizer")]
-    public void OnUseFertilizer(float percentAdded)
+    public void OnUseFertilizer()
     {
-        _currentWorldEvolutionPercent += percentAdded;
+        _currentWorldEvolutionPercent += _parameters.FertilizerWorldIncrease;
         CheckWorldViability();
     }
 

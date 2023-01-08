@@ -8,4 +8,5 @@ public class WorldEvolutionParameters : ScriptableObject
     [SerializeField] public float TintedMaxSpeedPercentPerSeconds = 1;
     [SerializeField] public SpriteRenderer TintedFilter = null;
     [SerializeField] public Gradient ColorGradient = null;
+    [SerializeField] public float FertilizerWorldIncrease = 1;
 }

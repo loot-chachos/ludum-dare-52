@@ -57,11 +57,6 @@ public class Plant
         UpdateSprite(-1);
     }
 
-    public void UpdateSpriteOnEvo(PlantState state = PlantState.Underground, PlantEvolution evo = null)
-    {
-        UpdateSprite();
-    }
-
     internal void Regress()
     {
         if (State > 0)

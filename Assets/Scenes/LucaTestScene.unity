@@ -468,6 +468,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8122893959497476784, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: _cachetScoreUpdateSpeedNumberPerSeconds
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
 --- !u!1 &1299623289

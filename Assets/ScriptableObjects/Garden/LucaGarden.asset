@@ -18,5 +18,6 @@ MonoBehaviour:
   _startingPos: {x: -8, y: -4}
   _generatonDirection: 0
   _updateFrequencyInSeconds: 0.1
+  _wateredDuration: 60
   _availablePlants:
   - {fileID: 11400000, guid: b661265e2f2102d4c8ebcba4f95d0e4d, type: 2}

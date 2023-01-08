@@ -30,34 +30,42 @@ public class Hand : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f, _clickableLayer);
         for (int i = 0; i < colliders.Length; i++)
         {
-            if (colliders[i].TryGetComponent(out Tool tool))
+            if (_grabbedTool == null)
             {
-                if (_grabbedTool == tool && _grabbedTool is CropTool cropTool)
+                if (colliders[i].TryGetComponent(out Tool tool))
                 {
-                    foreach (Collider2D collider in colliders)
-                    {
-                        if (collider.TryGetComponent(out CropCell cell))
-                        {
-                            cropTool.UseTool(cell);
-                            return;
-                        }
-                    }
-                    cropTool.UseTool(null);
+                    tool.ClickTool();
                     return;
                 }
-
-                tool.ClickTool();
-            }
-            else if (colliders[i].TryGetComponent(out CropCell cell))
-            {
-                if (_grabbedTool == null)
+                else if (colliders[i].TryGetComponent(out CropCell cell))
                 {
                     cell.Harvest();
                 }
+                else if (colliders[i].TryGetComponent(out Animal animal))
+                {
+                    animal.Kill();
+                }
             }
-            else if (colliders[i].TryGetComponent(out Animal animal))
+        }
+
+        if (_grabbedTool != null)
+        {
+            if (_grabbedTool is CropTool cropTool)
             {
-                animal.Kill();
+                foreach (Collider2D collider in colliders)
+                {
+                    if (collider.TryGetComponent(out CropCell cell))
+                    {
+                        cropTool.UseTool(cell);
+                        return;
+                    }
+                }
+                cropTool.UseTool(null);
+                return;
+            }
+            else
+            {
+                _grabbedTool.ClickTool();
             }
         }
     }

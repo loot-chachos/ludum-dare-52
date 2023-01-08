@@ -43,8 +43,8 @@ public class Grid
         }
     }
 
-    private Action<PlantState, PlantEvolution> _plantEvolved = null;
-    public event Action<PlantState, PlantEvolution> PlantEvolved
+    private Action _plantEvolved = null;
+    public event Action PlantEvolved
     {
         add
         {
@@ -109,7 +109,13 @@ public class Grid
             _crops[i].IsMoved += _isCropMoved;
             _crops[i].IsWatered += _isCropWatered;
             _crops[i].PlantEvolved += _plantEvolved;
+
             _crops[i].Initiliaze(_garden.WateredDuration);
+
+            _crops[i].PlantEvolved += UpdateCachet;
+            _crops[i].IsMoved += UpdateCachet;
+            _crops[i].IsBury += UpdateCachet;
+            _crops[i].IsCut += UpdateCachet;
         }
     }
     #endregion Events
@@ -239,7 +245,6 @@ public class Grid
                     //Debug.Log($"Next crop updated will be X:{i}, Y:{j}");
 #endif
                     // Seed it
-                    
                     Plant plant = _garden.PickRandomPlant();
                     _crops[cropIndex].Bury(plant);
                 }
@@ -250,5 +255,23 @@ public class Grid
         {
             _isCropCut();
         }
+    }
+
+    private void UpdateCachet(int cellIndex)
+    {
+        UpdateCachet();
+    }
+
+    private void UpdateCachet()
+    {
+        float cachet = 0.0f;
+        foreach(CropCell crop in _crops)
+        {
+            if (crop.HostedPlant != null)
+            {
+                cachet += crop.HostedPlant.CurrentEvolution.CachetGiven;
+            }
+        }
+        GameManager.Instance.ScoreManager.OnCachetUpdated(cachet);
     }
 }
