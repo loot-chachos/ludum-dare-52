@@ -7,6 +7,8 @@ public class Fertilizer : DraggableTool<CropCell>
 {
     public Type type { get { return typeof(CropCell); } }
 
+    protected override void UseTool() { }
+
     protected override void Action(CropCell crop)
     {
         if (GameManager.Instance.HasStarted)

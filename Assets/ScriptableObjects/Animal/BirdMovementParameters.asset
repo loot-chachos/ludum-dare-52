@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: BirdMovementParameters
   m_EditorClassIdentifier: 
   Speed: 5
+  MoneyReward: 15
+  WorldPercentEvolution: 5
+  CanEat: 1

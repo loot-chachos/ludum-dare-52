@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Seeder : DraggableTool<Seed>
 {
+    protected override void UseTool() { }
+
     protected override void Action(Seed seed)
     {
         seed.PlaceSeed();
