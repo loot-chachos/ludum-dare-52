@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour
     // 0 = Healthy world, 100 = Sick world
     [SerializeField] private float _currentCachet = 0.0f;
     [SerializeField] private float _currentMoney = 0.0f;
+    [SerializeField] private float _maxCachetPerCrop = 30.0f;
 
     [SerializeField] private CanvasGroup _canvasGroup = null;
     [SerializeField] private TextMeshProUGUI _cachetText = null;
@@ -73,7 +74,7 @@ public class ScoreManager : MonoBehaviour
 
     private void CheckWorldViability()
     {
-        if (_currentCachet >= 1000)
+        if (_currentCachet >= _maxCachetPerCrop * GameManager.Instance.Grid.GetCropCount())
         {
             GameManager.Instance.EndGame(true);
         }

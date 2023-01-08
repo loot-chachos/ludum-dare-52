@@ -125,6 +125,11 @@ public class Grid
         _garden = garden;
     }
 
+    public int GetCropCount()
+    {
+        return _crops.Length;
+    }
+
     public void InitializeGrid(Transform parent)
     {
         _isGridActive = false;
@@ -193,16 +198,17 @@ public class Grid
         return _crops[UnityEngine.Random.Range(0, _crops.Length)];
     }
 
-    public CropCell FindRandomCropAtLeastState(PlantState plantState)
+    public CropCell FindRandomCropBetweenState(PlantState minState, PlantState maxState)
     {
         List<CropCell> possibleCells = new List<CropCell>();
         foreach (CropCell crop in _crops)
         {
-            if (crop?.HostedPlant != null && crop.HostedPlant.State >= plantState)
+            if (crop?.HostedPlant != null && crop.HostedPlant.State >= minState && crop.HostedPlant.State <= maxState)
             {
                 possibleCells.Add(crop);
             }
         }
+
         if (possibleCells.Count == 0)
         {
             return null;

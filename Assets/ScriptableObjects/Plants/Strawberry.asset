@@ -10,38 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2c0099cd80eff64e8997b31077ca744, type: 3}
-  m_Name: Pumpkins
+  m_Name: Strawberry
   m_EditorClassIdentifier: 
-  _name: Pumpkins
+  _name: Strawberry
   _evolutions:
-  - _visual: {fileID: -1864267311, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+  - _visual: {fileID: 1434142893, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+    _cachetGiven: 0
+    _scoreGivenWhenHarvest: 0
+    _timeReachBeforeEvolve: 5
+    _wateredNeedToEvolve: 0
+    _stolenCountToEvolve: 0
+  - _visual: {fileID: -1547801571, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
     _cachetGiven: 0
     _scoreGivenWhenHarvest: 0
     _timeReachBeforeEvolve: 10
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 0
-  - _visual: {fileID: -1991533749, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
-    _cachetGiven: 0
-    _scoreGivenWhenHarvest: 0
-    _timeReachBeforeEvolve: 20
-    _wateredNeedToEvolve: 0
-    _stolenCountToEvolve: 0
-  - _visual: {fileID: -1928643840, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+  - _visual: {fileID: -176518335, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
     _cachetGiven: 10
     _scoreGivenWhenHarvest: 10
-    _timeReachBeforeEvolve: 30
+    _timeReachBeforeEvolve: 15
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 0
-  - _visual: {fileID: -245927597, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+  - _visual: {fileID: -1167436206, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
     _cachetGiven: 20
     _scoreGivenWhenHarvest: 20
-    _timeReachBeforeEvolve: 40
+    _timeReachBeforeEvolve: 20
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 1
-  - _visual: {fileID: 1479075930, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+  - _visual: {fileID: 1350673539, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
     _cachetGiven: 30
     _scoreGivenWhenHarvest: 30
-    _timeReachBeforeEvolve: 50
+    _timeReachBeforeEvolve: 25
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 2
   _growSpeed: 1

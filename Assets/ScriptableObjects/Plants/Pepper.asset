@@ -10,38 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2c0099cd80eff64e8997b31077ca744, type: 3}
-  m_Name: Beets
+  m_Name: Pepper
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Pepper
   _evolutions:
-  - _visual: {fileID: -1074020954, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+  - _visual: {fileID: -1121026067, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
     _cachetGiven: 10
     _scoreGivenWhenHarvest: 10
     _timeReachBeforeEvolve: 10
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 0
-  - _visual: {fileID: -920627, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+  - _visual: {fileID: -1657529590, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
     _cachetGiven: 10
     _scoreGivenWhenHarvest: 10
     _timeReachBeforeEvolve: 20
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 0
-  - _visual: {fileID: 322615605, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+  - _visual: {fileID: 469994692, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
     _cachetGiven: 10
     _scoreGivenWhenHarvest: 10
     _timeReachBeforeEvolve: 30
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 0
-  - _visual: {fileID: 322615605, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
-    _cachetGiven: 10
-    _scoreGivenWhenHarvest: 10
+  - _visual: {fileID: -985689850, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+    _cachetGiven: 20
+    _scoreGivenWhenHarvest: 20
     _timeReachBeforeEvolve: 40
     _wateredNeedToEvolve: 0
-    _stolenCountToEvolve: 0
-  - _visual: {fileID: 322615605, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
-    _cachetGiven: 10
-    _scoreGivenWhenHarvest: 10
+    _stolenCountToEvolve: 1
+  - _visual: {fileID: -1561239479, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+    _cachetGiven: 30
+    _scoreGivenWhenHarvest: 30
     _timeReachBeforeEvolve: 50
     _wateredNeedToEvolve: 0
-    _stolenCountToEvolve: 0
+    _stolenCountToEvolve: 2
   _growSpeed: 1

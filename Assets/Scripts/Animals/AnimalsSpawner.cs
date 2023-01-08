@@ -67,16 +67,11 @@ public class AnimalsSpawner : MonoBehaviour
 
         Seed seed = GameManager.Instance.SeedsGrid.FindRandomSeed();
 
-        CropCell crop = GameManager.Instance.Grid.FindRandomCropAtLeastState(PlantState.Maturity);
+        CropCell crop = GameManager.Instance.Grid.FindRandomCropBetweenState(PlantState.Maturity, PlantState.Great);
 
         if (seed == null && crop == null)
         {
-            crop = GameManager.Instance.Grid.FindRandomCropAtLeastState(PlantState.Underground);
-            if (crop == null)
-            {
-                crop = GameManager.Instance.Grid.FindRandomCrop();
-            }
-
+            crop = GameManager.Instance.Grid.FindRandomCrop();
             animal.StartMovement(crop);
         }
         else if (seed == null)

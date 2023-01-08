@@ -57,7 +57,7 @@ public class Animal : MonoBehaviour
                     _eat.Invoke();
                 }
 
-                if (_target is CropCell crop && crop.HostedPlant != null && crop.HostedPlant.State >= PlantState.Maturity)
+                if (_target is CropCell crop && crop.HostedPlant != null && crop.HostedPlant.State >= PlantState.Maturity && crop.HostedPlant.State < PlantState.Top)
                 {
                     crop.Stolen();
                     _eat.Invoke();

@@ -10,38 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2c0099cd80eff64e8997b31077ca744, type: 3}
-  m_Name: Turnips
+  m_Name: Cabbage
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Cabbage
   _evolutions:
-  - _visual: {fileID: -396630823, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+  - _visual: {fileID: -1812269829, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
     _cachetGiven: 0
     _scoreGivenWhenHarvest: 0
-    _timeReachBeforeEvolve: 5
+    _timeReachBeforeEvolve: 7
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 0
-  - _visual: {fileID: -998260935, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+  - _visual: {fileID: 1414541259, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
     _cachetGiven: 0
     _scoreGivenWhenHarvest: 0
-    _timeReachBeforeEvolve: 10
+    _timeReachBeforeEvolve: 14
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 0
-  - _visual: {fileID: 586582515, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+  - _visual: {fileID: 1784715006, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
     _cachetGiven: 10
     _scoreGivenWhenHarvest: 10
-    _timeReachBeforeEvolve: 15
+    _timeReachBeforeEvolve: 21
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 0
-  - _visual: {fileID: 1667495175, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
-    _cachetGiven: 10
-    _scoreGivenWhenHarvest: 10
-    _timeReachBeforeEvolve: 20
+  - _visual: {fileID: -1813308056, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+    _cachetGiven: 20
+    _scoreGivenWhenHarvest: 20
+    _timeReachBeforeEvolve: 30
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 1
-  - _visual: {fileID: -2135287963, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
-    _cachetGiven: 10
-    _scoreGivenWhenHarvest: 10
-    _timeReachBeforeEvolve: 25
+  - _visual: {fileID: -1421678877, guid: a6f2ae25c1bb75f47b1cbd868a3a3a32, type: 3}
+    _cachetGiven: 30
+    _scoreGivenWhenHarvest: 30
+    _timeReachBeforeEvolve: 40
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 2
   _growSpeed: 1
