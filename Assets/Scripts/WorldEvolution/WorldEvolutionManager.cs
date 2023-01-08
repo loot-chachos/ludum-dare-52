@@ -27,16 +27,16 @@ public class WorldEvolutionManager : MonoBehaviour
     }
 
     [ContextMenu("OnKillAnimals")]
-    public void OnKillAnimals()
+    public void OnKillAnimals(float percentAdded)
     {
-        _currentWorldEvolutionPercent += _parameters.KillDegradationPercent;
+        _currentWorldEvolutionPercent += percentAdded;
         CheckWorldViability();
     }
 
     [ContextMenu("OnUseFertilizer")]
-    public void OnUseFertilizer()
+    public void OnUseFertilizer(float percentAdded)
     {
-        _currentWorldEvolutionPercent += _parameters.FertilizerDegradationPercent;
+        _currentWorldEvolutionPercent += percentAdded;
         CheckWorldViability();
     }
 

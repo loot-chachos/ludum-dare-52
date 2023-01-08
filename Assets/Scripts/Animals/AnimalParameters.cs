@@ -7,4 +7,6 @@ public class AnimalParameters : ScriptableObject
 {
     [SerializeField] public float Speed = 1.0f;
     [SerializeField] public int MoneyReward = 15;
+    [SerializeField] public int WorldPercentEvolution = 15;
+    [SerializeField] public bool CanEat = true;
 }

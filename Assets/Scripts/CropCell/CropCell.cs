@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CropCell : MonoBehaviour
+public class CropCell : MonoBehaviour, IEatable
 {
     #region Fields
     [SerializeField] private Plant _hostedPlant = null;

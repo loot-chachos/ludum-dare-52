@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: _animalParameters
       value: 
       objectReference: {fileID: 11400000, guid: c748a4c2a917beb4ca2714b17e6c01a3, type: 2}
+    - target: {fileID: 1976098872535530143, guid: 6cf3879205ec33f49b1deb5bf84b460f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: be99035a8bf81bc42890ea6b0a206002, type: 2}
     - target: {fileID: 3294760059905054205, guid: 6cf3879205ec33f49b1deb5bf84b460f, type: 3}
       propertyPath: m_Sprite
       value: 

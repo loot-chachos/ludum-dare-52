@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BlackBirdAnimatorController
+  m_Controller: {fileID: 9100000, guid: cd90b30c93173134cacfe0e1354a5573, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d7e3d241efc78c0438bb5e9dfff3d115, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1a1b4036104878847852ba4104e92437, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5fc4d458380ef6e4698508557012d9a8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e88d3e66ee801a447b8fa2c3665cecb1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 97e8b2f5807b25c41a60779694b820ee, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0943634f6d1ea1440944a774b3d0c261, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 426f750d2f3301642a1dfcbac6476c38, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: de8795312f045304ab889a716949b321, type: 2}

@@ -55,9 +55,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SparrowBird
       objectReference: {fileID: 0}
+    - target: {fileID: 1976098872535530143, guid: 6cf3879205ec33f49b1deb5bf84b460f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: d3747d05da32ad5438a16f704246dd55, type: 2}
     - target: {fileID: 3294760059905054205, guid: 6cf3879205ec33f49b1deb5bf84b460f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -835984564, guid: d099bc891f15f6d478c325307ef83655, type: 3}
+      objectReference: {fileID: 1513613416, guid: d099bc891f15f6d478c325307ef83655, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cf3879205ec33f49b1deb5bf84b460f, type: 3}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,34 +6,63 @@ using UnityEngine.Events;
 
 public class Animal : MonoBehaviour
 {
-    private SpriteRenderer _spriteRenderer;
+    private Animator _animator;
     private Rigidbody2D _rigidbody2D;
     [SerializeField] private AnimalParameters _animalParameters;
     [SerializeField] private float _destroyDistanceFromCenter = 10.0f;
-    private CropCell _targetFlower = null;
+    private IEatable _target = null;
 
     [SerializeField] private UnityEvent _onKilled;
     [SerializeField] private GameObject _particlePrefab = null;
 
+    private Action _eat = null;
+
+    public event Action Eat
+    {
+        add
+        {
+            _eat -= value;
+            _eat += value;
+        }
+        remove
+        {
+            _eat -= value;
+        }
+    }
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
-    public void StartMovement(CropCell targetPoint)
+    public void StartMovement(IEatable targetPoint)
     {
-        _targetFlower = targetPoint;
-        Vector2 direction = (_targetFlower.transform.position - transform.position).normalized;
+        _target = targetPoint;
+        Vector2 direction = (((MonoBehaviour)_target).transform.position - transform.position).normalized;
         _rigidbody2D.velocity = direction * _animalParameters.Speed;
-        _spriteRenderer.transform.right = direction;
+        float angle = Vector2.Angle(Vector2.right, direction) * Mathf.Sign(Vector2.Dot(Vector2.down, direction));
+        _animator.SetFloat("Angle", angle);
+        Eat += AnimateEat;
     }
 
     private void Update()
     {
-        if (Vector2.Distance(_targetFlower.transform.position, transform.position) < 0.2f)
+        if (_target != null && _animalParameters.CanEat)
         {
-            _targetFlower.Stolen();
+            if (Vector2.Distance(((MonoBehaviour)_target).transform.position, transform.position) < 0.2f)
+            {
+                if (_target is Seed seed && seed.IsSeeded)
+                {
+                    seed.Eat();
+                    _eat.Invoke();
+                }
+
+                if (_target is CropCell crop && crop.HostedPlant != null && crop.HostedPlant.State >= PlantState.Maturity)
+                {
+                    crop.Stolen();
+                    _eat.Invoke();
+                }
+            }
         }
 
         if (transform.position.sqrMagnitude > _destroyDistanceFromCenter * _destroyDistanceFromCenter)
@@ -44,9 +74,15 @@ public class Animal : MonoBehaviour
     public void Kill()
     {
         GameManager.Instance.ScoreManager.OnMoneyAdded(_animalParameters.MoneyReward);
-        GameManager.Instance.WorldEvolutionManager.OnKillAnimals();
+        GameManager.Instance.WorldEvolutionManager.OnKillAnimals(_animalParameters.WorldPercentEvolution);
         _onKilled.Invoke();
         Instantiate(_particlePrefab, transform.position, transform.rotation);
+        Eat -= AnimateEat;
         Destroy(gameObject);
+    }
+
+    public void AnimateEat()
+    {
+        _animator.SetTrigger("Eat");
     }
 }

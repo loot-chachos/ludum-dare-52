@@ -9,7 +9,7 @@ public class AnimalsSpawner : MonoBehaviour
     private float _timer = 0.0f;
     private void Update()
     {
-        if (GameManager.Instance.IsGamePaused)
+        if (GameManager.Instance.IsGamePaused || GameManager.Instance.HasStarted == false)
         {
             return;
         }
@@ -52,11 +52,33 @@ public class AnimalsSpawner : MonoBehaviour
         int randomIndex = Random.Range(0, _animalPrefabs.Count);
         Animal animal = Instantiate(_animalPrefabs[randomIndex], spawnPoint, Quaternion.identity, transform);
 
+        Seed seed = GameManager.Instance.SeedsGrid.FindRandomSeed();
+
         CropCell crop = GameManager.Instance.Grid.FindRandomCropAtLeastState(PlantState.Maturity);
-        if (crop == null)
-        { 
+
+        if (seed == null && crop == null)
+        {
             crop = GameManager.Instance.Grid.FindRandomCropAtLeastState(PlantState.Underground);
+            animal.StartMovement(crop);
         }
-        animal.StartMovement(crop);
+        else if (seed == null)
+        {
+            animal.StartMovement(crop);
+        }
+        else if (crop == null)
+        {
+            animal.StartMovement(seed);
+        }
+        else
+        {
+            if (Random.value > 0.75f)
+            {
+                animal.StartMovement(seed);
+            }
+            else
+            {
+                animal.StartMovement(crop);
+            }
+        }
     }
 }

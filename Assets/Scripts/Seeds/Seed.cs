@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seed : MonoBehaviour
+public class Seed : MonoBehaviour, IEatable
 {
     [SerializeField] private GameObject _seedVisual = null;
     private bool _isSeeded = false;
@@ -23,5 +23,18 @@ public class Seed : MonoBehaviour
         {
             _isEaten -= value;
         }
+    }
+
+    public void Eat()
+    {
+        _isEaten?.Invoke();
+        _seedVisual.SetActive(false);
+        _isSeeded = false;
+    }
+
+    public void PlaceSeed()
+    {
+        _seedVisual.SetActive(true);
+        _isSeeded = true;
     }
 }

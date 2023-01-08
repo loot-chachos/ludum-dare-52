@@ -55,6 +55,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackBird
       objectReference: {fileID: 0}
+    - target: {fileID: 1976098872535530143, guid: 6cf3879205ec33f49b1deb5bf84b460f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: f47e64fd47c91a044bef8593c1888309, type: 2}
+    - target: {fileID: 3294760059905054205, guid: 6cf3879205ec33f49b1deb5bf84b460f, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3294760059905054205, guid: 6cf3879205ec33f49b1deb5bf84b460f, type: 3}
       propertyPath: m_Sprite
       value: 

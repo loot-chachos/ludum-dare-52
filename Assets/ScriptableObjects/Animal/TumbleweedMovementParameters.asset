@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e02fc67c527dff4f9c98cfd757326bc, type: 3}
   m_Name: TumbleweedMovementParameters
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 6
   MoneyReward: 0
+  WorldPercentEvolution: 0
+  CanEat: 0
