@@ -297,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentCachet: 0
   _currentMoney: 0
+  _maxCachetPerCrop: 25
   _canvasGroup: {fileID: 4050654508001119878}
   _cachetText: {fileID: 1685072984540231123}
   _moneyText: {fileID: 6507640468446105090}
