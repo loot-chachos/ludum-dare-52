@@ -34,13 +34,10 @@ public class Hand : MonoBehaviour
             {
                 if (_grabbedTool == tool && _grabbedTool is CropTool cropTool)
                 {
-                    UnityEngine.Debug.Log(_grabbedTool);
                     foreach (Collider2D collider in colliders)
                     {
-                        UnityEngine.Debug.Log(collider);
                         if (collider.TryGetComponent(out CropCell cell))
                         {
-                            UnityEngine.Debug.Log(cell);
                             cropTool.UseTool(cell);
                             return;
                         }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Shovel : CropTool
 {
     private CropCell _storedCell = null;
+    private Plant _storedPlant = null;
 
     protected override void UseTool() { }
 
@@ -14,11 +15,12 @@ public class Shovel : CropTool
         {
             if (crop != null)
             {
-                crop.Bury(_storedCell.HostedPlant);
+                _storedCell.Bury(crop.HostedPlant);
+                crop.Bury(_storedPlant);
             }
             else
             {
-                _storedCell.Bury(_storedCell.HostedPlant);
+                _storedCell.Bury(_storedPlant);
             }
             _storedCell = null;
             ReturnToStartPos();
@@ -27,6 +29,7 @@ public class Shovel : CropTool
         {
             if (crop != null && crop.HostedPlant != null)
             {
+                _storedPlant = crop.HostedPlant;
                 _storedCell = crop;
                 _storedCell.Move();
             }

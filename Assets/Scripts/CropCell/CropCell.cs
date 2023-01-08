@@ -154,9 +154,18 @@ public class CropCell : MonoBehaviour, IEatable
     /// <param name="plant"></param>
     public void Bury(Plant plant)
     {
-        UpdateCropState(CropState.fertile);
-        _hostedPlant = plant;
-        RegisterPlant();
+        if (plant != null)
+        {
+            _hostedPlant = plant;
+            UpdateCropState(CropState.fertile);
+            RegisterPlant();
+        }
+        else
+        {
+            RemovePlant();
+            UpdateCropState(CropState.blank);
+        }
+
         if (_isBury != null)
         {
             _isBury();
@@ -186,7 +195,8 @@ public class CropCell : MonoBehaviour, IEatable
 
     public void Move()
     {
-        // TODO
+        RemovePlant();
+        UpdateCropState(CropState.blank);
 
         if (_isMoved != null)
         {
@@ -277,9 +287,12 @@ public class CropCell : MonoBehaviour, IEatable
 
     private void RemovePlant()
     {
-        IsBury -= _hostedPlant.UpdateSprite;
-        IsCut += _hostedPlant.UpdateSprite;
-        PlantEvolved -= _hostedPlant.UpdateSpriteOnEvo;
+        if (_hostedPlant != null)
+        {
+            IsBury -= _hostedPlant.UpdateSprite;
+            IsCut -= _hostedPlant.UpdateSprite;
+            PlantEvolved -= _hostedPlant.UpdateSpriteOnEvo;
+        }
         _plantSpriteRenderer.sprite = null;
         _hostedPlant = null;
     }

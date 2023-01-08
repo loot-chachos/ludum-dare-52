@@ -99,4 +99,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8377b82566668f148bc745299d7f5845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHoldDuration: 1
+  _maxHoldDuration: 3600
