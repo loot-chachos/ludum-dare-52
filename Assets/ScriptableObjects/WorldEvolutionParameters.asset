@@ -43,4 +43,4 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 3
-  FertilizerWorldIncrease: 3
+  FertilizerWorldIncreasePerSeconds: 2

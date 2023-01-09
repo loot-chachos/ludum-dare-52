@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: terrain-v7_0
+      name: rocks-1
       rect:
         serializedVersion: 2
         x: 0
@@ -726,7 +726,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain-v7_29
+      name: rocks-2
       rect:
         serializedVersion: 2
         x: 0
@@ -1335,64 +1335,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain-v7_58
+      name: patch-1
       rect:
         serializedVersion: 2
         x: 0
-        y: 1952
-        width: 32
-        height: 32
+        y: 1888
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 32, y: 32, z: 32, w: 32}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 5d082b2eeb8223149b9b3f95b33878fd
       internalID: 1595112041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain-v7_59
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 1952
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce82db28b10a03946a0e2d9c4e37d6ad
-      internalID: 1614392733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain-v7_60
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 1952
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34e92f607a6806f47aae99d0e5cb1525
-      internalID: 1024950885
       vertices: []
       indices: 
       edges: []
@@ -1965,69 +1923,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain-v7_88
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1920
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa4107d736649b94fa0d9a6a733e9b0c
-      internalID: -1257865388
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain-v7_89
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 1920
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74d3a8f99aacc5d4989575326c000e36
-      internalID: -190898207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain-v7_90
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 1920
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebadf2a061aa520468e8e887a20330fb
-      internalID: 456927956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: terrain-v7_91
       rect:
         serializedVersion: 2
@@ -2590,69 +2485,6 @@ TextureImporter:
       bones: []
       spriteID: 7dbddab29291e7b489bf56cf29beaa52
       internalID: -1877802168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain-v7_118
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1888
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f02ae8bd6f6d38644933647e499d2107
-      internalID: -1406689035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain-v7_119
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 1888
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c5590db3d3561e439b07f07ec714ac0
-      internalID: -1754201083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: terrain-v7_120
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 1888
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c542a6acb4bf28f499b244a9d49f18fd
-      internalID: -1707048329
       vertices: []
       indices: 
       edges: []
@@ -20991,7 +20823,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain-v7_994
+      name: ground-1
       rect:
         serializedVersion: 2
         x: 608
@@ -22209,7 +22041,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain-v7_1052
+      name: ground2
       rect:
         serializedVersion: 2
         x: 576
@@ -22230,7 +22062,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain-v7_1053
+      name: ground3
       rect:
         serializedVersion: 2
         x: 608
@@ -22251,7 +22083,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain-v7_1054
+      name: ground4
       rect:
         serializedVersion: 2
         x: 640
@@ -30595,8 +30427,8 @@ TextureImporter:
       terrain-v7_98: 1190172426
       terrain-v7_164: -868577067
       terrain-v7_1113: 1231522988
-      terrain-v7_1223: -359544489
       terrain-v7_1017: 1861872022
+      terrain-v7_1223: -359544489
       terrain-v7_1007: -834640274
       terrain-v7_401: 1848861517
       terrain-v7_1303: -480530501
@@ -30715,7 +30547,6 @@ TextureImporter:
       terrain-v7_357: -1288970336
       terrain-v7_1035: -58879983
       terrain-v7_571: 1591791546
-      terrain-v7_1054: 951497687
       terrain-v7_297: -1395143172
       terrain-v7_874: -1386849047
       terrain-v7_809: 242283519
@@ -30878,6 +30709,7 @@ TextureImporter:
       terrain-v7_1108: 736467152
       terrain-v7_171: 14598063
       terrain-v7_1444: -1358243524
+      ground3: -1610385478
       terrain-v7_483: -1610640028
       terrain-v7_1130: -375059403
       terrain-v7_888: 390333150
@@ -31015,6 +30847,7 @@ TextureImporter:
       terrain-v7_424: 1014061511
       terrain-v7_736: 1109193559
       terrain-v7_1441: -1532115698
+      patch2: 1614392733
       terrain-v7_1375: -1286586282
       terrain-v7_785: -1190051076
       terrain-v7_940: 1055105385
@@ -31073,6 +30906,7 @@ TextureImporter:
       terrain-v7_9: 1741665020
       terrain-v7_276: -162996427
       terrain-v7_902: 153858766
+      ground2: -1768272339
       terrain-v7_123: -1404425530
       terrain-v7_207: 285053549
       terrain-v7_972: -1718113618
@@ -31121,6 +30955,7 @@ TextureImporter:
       terrain-v7_114: -1101650648
       terrain-v7_796: 1900244618
       terrain-v7_897: -1947149135
+      ground-1: -569355209
       terrain-v7_405: -334246635
       terrain-v7_50: 1211574523
       terrain-v7_471: 1781697316
@@ -31246,6 +31081,7 @@ TextureImporter:
       terrain-v7_242: 603657833
       terrain-v7_1328: 1039553093
       terrain-v7_1210: 1094671531
+      rocks-1: -197870420
       terrain-v7_1398: -1903545198
       terrain-v7_1228: 1884557559
       terrain-v7_1227: -1840812089
@@ -31411,7 +31247,6 @@ TextureImporter:
       terrain-v7_497: -502013070
       terrain-v7_848: -1970184747
       terrain-v7_704: 1409032682
-      terrain-v7_59: 1614392733
       terrain-v7_1372: -432398730
       terrain-v7_16: -713878722
       terrain-v7_585: 1453476505
@@ -31604,7 +31439,6 @@ TextureImporter:
       terrain-v7_25: 993800619
       terrain-v7_1231: 218666911
       terrain-v7_439: -1514688009
-      terrain-v7_495: 149704791
       terrain-v7_127: -647022363
       terrain-v7_561: 367378385
       terrain-v7_1080: -188774433
@@ -31614,6 +31448,7 @@ TextureImporter:
       terrain-v7_792: 552507674
       terrain-v7_815: 183704895
       terrain-v7_204: 2135591301
+      terrain-v7_495: 149704791
       terrain-v7_112: 971611225
       terrain-v7_1039: 1169959310
       terrain-v7_754: -2144544383
@@ -31629,7 +31464,6 @@ TextureImporter:
       terrain-v7_1205: 759243600
       terrain-v7_267: -234324430
       terrain-v7_878: 56007428
-      terrain-v7_1052: -1768272339
       terrain-v7_725: 32769935
       terrain-v7_286: -1953738782
       terrain-v7_671: -2119958684
@@ -31638,10 +31472,8 @@ TextureImporter:
       terrain-v7_7: -1870614373
       terrain-v7_311: -690481439
       terrain-v7_5: -1259708040
-      terrain-v7_1053: -1610385478
       terrain-v7_1308: -243710774
       terrain-v7_1370: 1934199871
-      terrain-v7_29: 616441976
       terrain-v7_663: -1959648849
       terrain-v7_438: 233476558
       terrain-v7_666: -1196945136
@@ -31657,7 +31489,6 @@ TextureImporter:
       terrain-v7_1409: 1873006745
       terrain-v7_946: -89560417
       terrain-v7_1131: 2012529177
-      terrain-v7_58: 1595112041
       terrain-v7_797: -893006860
       terrain-v7_892: 1173351721
       terrain-v7_77: 744832250
@@ -31732,6 +31563,7 @@ TextureImporter:
       terrain-v7_996: 1099807515
       terrain-v7_48: 1189245486
       terrain-v7_1343: 2022989774
+      ground4: 951497687
       terrain-v7_778: 294462549
       terrain-v7_1157: 1201529717
       terrain-v7_288: 658943902
@@ -31851,7 +31683,6 @@ TextureImporter:
       terrain-v7_1420: 824299496
       terrain-v7_154: 1820097924
       terrain-v7_1154: 1797630918
-      terrain-v7_994: -569355209
       terrain-v7_1171: -1349674703
       terrain-v7_280: 1674289704
       terrain-v7_826: -531405524
@@ -31862,6 +31693,7 @@ TextureImporter:
       terrain-v7_1180: -505537041
       terrain-v7_359: -1292052390
       terrain-v7_211: -1943984509
+      rocks-2: 616441976
       terrain-v7_223: 1239190590
       terrain-v7_714: 1519110313
       terrain-v7_661: 1035018360
@@ -31975,7 +31807,6 @@ TextureImporter:
       terrain-v7_981: -1840596543
       terrain-v7_97: 1864059003
       terrain-v7_916: 1270180146
-      terrain-v7_0: -197870420
       terrain-v7_643: 1682292466
       terrain-v7_324: 1435331443
       terrain-v7_145: 1758455823
@@ -31990,6 +31821,7 @@ TextureImporter:
       terrain-v7_330: 1536366374
       terrain-v7_973: 1552126408
       terrain-v7_1185: 1133870513
+      patch-1: 1595112041
       terrain-v7_622: -1868949175
       terrain-v7_1267: -1492286340
       terrain-v7_957: -1952009682
