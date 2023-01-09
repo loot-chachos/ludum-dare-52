@@ -11,6 +11,10 @@ public class Hand : MonoBehaviour
     [SerializeField] private KeyCode _seederKeyCode  = KeyCode.E;
     [SerializeField] private KeyCode _shovelKeyCode = KeyCode.W;
     [SerializeField] private KeyCode _wateringKeyCode = KeyCode.Q;
+
+    [SerializeField] private GameObject _hand = null;
+    [SerializeField] private GameObject _hoe = null;
+    [SerializeField] private GameObject _aim = null;
     private Tool _grabbedTool = null;
 
     public Tool GrabbedTool { get => _grabbedTool; }
@@ -67,6 +71,44 @@ public class Hand : MonoBehaviour
             OnMouseClick();
         }
     }
+
+    private void FixedUpdate()
+    {
+        if (_grabbedTool != null)
+        {
+            _hand.SetActive(false);
+            _hoe.SetActive(false);
+            _aim.SetActive(false);
+        }
+        else
+        {
+            bool hand = false;
+            bool hoe = false;
+            bool aim = false;
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f, _clickableLayer);
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                if (colliders[i].TryGetComponent(out CropCell cell) && cell.HostedPlant != null && cell.HostedPlant.State >= PlantState.Maturity)
+                {
+                    hoe = true;
+                    break;
+                }
+                if (colliders[i].TryGetComponent(out Animal animal))
+                {
+                    aim = true;
+                    break;
+                }
+            }
+            if (hoe == false && aim == false)
+            {
+                hand = true;
+            }
+            _hand.SetActive(hand);
+            _hoe.SetActive(hoe);
+            _aim.SetActive(aim);
+        }
+    }
+    
 
     public Collider2D[] FindCollision()
     {

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 966476b26a56fdb4cb6b60d7d6ed78ea
+guid: b9ca7c4886565f54bae759d65454c0aa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hoe_0
+      name: icons_small_0
       rect:
         serializedVersion: 2
-        x: 276
-        y: 705
-        width: 22
-        height: 22
+        x: 1
+        y: 34
+        width: 28
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baeb7201c70d4b84fa960ef22a350ffc
-      internalID: 1866409114
+      spriteID: ccf6e03bf545f6f46aee710e9ef42fba
+      internalID: 906499428
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      hoe_0: 1866409114
+      icons_small_0: 906499428
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
