@@ -57,7 +57,12 @@ public abstract class Tool : MonoBehaviour
     {
         GameManager.Instance.Hand.GrabTool(null);
         _isGrab = false;
+        ResetRotation();
         transform.position = _startPosition;
-        transform.eulerAngles.Set(transform.eulerAngles.x, transform.eulerAngles.y, 0.0F);
+    }
+
+    protected void ResetRotation()
+    {
+        transform.rotation = Quaternion.identity;
     }
 }
