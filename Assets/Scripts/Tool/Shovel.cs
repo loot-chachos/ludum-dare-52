@@ -12,6 +12,7 @@ public class Shovel : CropTool
 
     public override void UseTool(CropCell crop)
     {
+        GameManager.Instance.AudioManager.PlayTool(Type);
         if (_storedCell != null)
         {
             if (crop != null)
