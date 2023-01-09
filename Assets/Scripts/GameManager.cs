@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private WorldEvolutionManager _worldEvolutionManager = null;
     [SerializeField] private AnimalsSpawner _animalSpawner = null;
     [SerializeField] private DialogManager _dialogManager = null;
+    [SerializeField] private AudioManager _audioManager = null;
 
     [Header("Others")]
     [SerializeField] private Vector3 _gameViewPosition = Vector3.zero;
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
+        _audioManager.PlayMenuMusic();
         _transitionManager = new TransitionManager();
     }
 
@@ -123,6 +125,7 @@ public class GameManager : MonoBehaviour
         _scoreManager.Show();
 
         _dialogManager.DialogFinished += OnDialogFinished;
+        _audioManager.PlayDialogMusic();
         _dialogManager.Show();
     }
 
@@ -131,6 +134,7 @@ public class GameManager : MonoBehaviour
         // Others
         _animalSpawner.OnStartGame();
 
+        _audioManager.PlayInGameMusic();
         _isPlaying = true;
     }
 

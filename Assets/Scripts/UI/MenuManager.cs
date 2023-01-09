@@ -31,6 +31,11 @@ public class MenuManager : MonoBehaviour
         _currentPanel.SetActive(true);
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
     public void DisplayGameOverPanel()
     {
         _panels[(int)PanelAvailable.GameOver].SetActive(true);

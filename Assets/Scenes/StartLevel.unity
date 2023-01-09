@@ -275,17 +275,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &938399532 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7445941696114403137, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-  m_PrefabInstance: {fileID: 1631904451947432577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1009517151
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,17 +391,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1699588902 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-  m_PrefabInstance: {fileID: 1631904451947432577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7b64dd686401d4d982523a6fa41e29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1631904451947432577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420,9 +398,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 20159740499042999, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 892275507755500474, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayCredits
+      objectReference: {fileID: 0}
     - target: {fileID: 1070338908536529419, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: m_fontSize
-      value: 89.4
+      value: 89.45
       objectReference: {fileID: 0}
     - target: {fileID: 1645802467816317650, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: _gameView
@@ -471,34 +457,6 @@ PrefabInstance:
     - target: {fileID: 2694938897254706209, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2873725389680896673, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2873725389680896673, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2873725389680896673, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1699588902}
-    - target: {fileID: 2873725389680896673, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2873725389680896673, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextDialog
-      objectReference: {fileID: 0}
-    - target: {fileID: 2873725389680896673, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2873725389680896673, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2972437685823999276, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -562,11 +520,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6453693955623461205, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: m_fontSize
-      value: 89.4
+      value: 89.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996720617864191312, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayOptions
       objectReference: {fileID: 0}
     - target: {fileID: 7179366851861249249, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: m_fontSize
-      value: 89.4
+      value: 89.45
       objectReference: {fileID: 0}
     - target: {fileID: 7293351352395208114, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: m_RootOrder
@@ -612,65 +574,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: _group
-      value: 
-      objectReference: {fileID: 1631904451947432578}
-    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: _textObj
-      value: 
-      objectReference: {fileID: 938399532}
-    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: _speech.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: _speech.Array.data[0]
-      value: "\xA1 Hola Amigo !"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: _speech.Array.data[1]
-      value: Long time no see.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: _speech.Array.data[2]
-      value: I was sure you will come back to take care of your garden with all that
-        chaos happening.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: _speech.Array.data[3]
-      value: I'm sure you remember how the job is done back when we were growing
-        <i>melocoton</i>
-      objectReference: {fileID: 0}
-    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: _speech.Array.data[4]
-      value: Watered often, and wait a bit before harvesting your plants
-      objectReference: {fileID: 0}
-    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: _speech.Array.data[5]
-      value: Animals are really hungry back here. You might want to use those seed
-        to feed them but I'm not sure it will be enough
-      objectReference: {fileID: 0}
-    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: _speech.Array.data[6]
-      value: Also, there is a bit of fertilizer. Not sure where it comes from...
-      objectReference: {fileID: 0}
-    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-      propertyPath: _speech.Array.data[7]
-      value: Good luck amigo. And let's have a couple chupitos together when you're
-        available.
-      objectReference: {fileID: 0}
     - target: {fileID: 8035649789722795500, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: m_fontSize
-      value: 89.4
+      value: 89.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
---- !u!225 &1631904451947432578 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 7786419766516312728, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
-  m_PrefabInstance: {fileID: 1631904451947432577}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1845649707234184903
 PrefabInstance:
   m_ObjectHideFlags: 0
