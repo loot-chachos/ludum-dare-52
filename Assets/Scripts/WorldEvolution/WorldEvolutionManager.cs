@@ -34,9 +34,9 @@ public class WorldEvolutionManager : MonoBehaviour
     }
 
     [ContextMenu("OnUseFertilizer")]
-    public void OnUseFertilizer()
+    public void OnUseFertilizer(float deltaTime)
     {
-        _currentWorldEvolutionPercent += _parameters.FertilizerWorldIncrease;
+        _currentWorldEvolutionPercent += _parameters.FertilizerWorldIncreasePerSeconds * deltaTime;
         CheckWorldViability();
     }
 

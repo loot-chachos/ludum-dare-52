@@ -9,6 +9,7 @@ public class PlantParameters : ScriptableObject
     [SerializeField] private string _name = string.Empty;
     [SerializeField] private List<PlantEvolution> _evolutions = new List<PlantEvolution>();
     [SerializeField] private float _growSpeed = 1.0f;
+    [SerializeField] public float FertilizeMultiplierPerSeconds = 0.1f;
 
     public string Name => _name;
     public List<PlantEvolution> Evolutions => _evolutions;

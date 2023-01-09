@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     public WorldEvolutionManager WorldEvolutionManager { get => _worldEvolutionManager; }
     public ScoreManager ScoreManager { get => _scoreManager; }
+    public AudioManager AudioManager { get => _audioManager; }
     public MenuManager MenuManager { get => _menuManager; }
     public bool HasStarted { get => _isPlaying; }
     public bool IsGamePaused { get => _isPaused; }

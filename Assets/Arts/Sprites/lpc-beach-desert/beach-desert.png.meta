@@ -1,0 +1,2477 @@
+fileFormatVersion: 2
+guid: c876aa73796186f43aeed1baa7337a21
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: beach-desert_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1001
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a169c40510269734baecef87ef7ab580
+      internalID: 874961554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 993
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0327971a6e007de46afe57812ab612a9
+      internalID: 858297978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 996
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962c02840d8c1b04eb2d9040e1fd7be9
+      internalID: 1314076397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_3
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f99fb2dba629984db66def802882105
+      internalID: 77139590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1000
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53768ac4b8651284190883527947e340
+      internalID: 1964435344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_5
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1004
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7813ecf3b7a9d2a40942d866b38eab8d
+      internalID: -1765863605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_6
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 983
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bb73511c943dc4294c49a4818a08f8
+      internalID: 884717374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_7
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 974
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a2dc00a4e213642b93616b32f3c444
+      internalID: 1470913457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_8
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 995
+        width: 50
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94558ea51f04d049a11aaa01590f33d
+      internalID: 278229837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_9
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 998
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73335a65001ac2f42a2ccba764333234
+      internalID: -1187696177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_10
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 968
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044b058825097644bac02dfa079a2138
+      internalID: 1168379837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 968
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa168e709053e0545b46f29de981a01a
+      internalID: 1683586805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_12
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 971
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dab77d11ee95ea4d935ebb82cfd24e9
+      internalID: 2113089995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_13
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 977
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb7dd9c2b5146449ba8c2bd3ddedfa3
+      internalID: 1089020663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_14
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 965
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe828e5702195d44931c082b7c09b6b
+      internalID: -1518877651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 973
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307c200f6ab8cb842ac625a13503287d
+      internalID: 916467120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_16
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 963
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97855925ac1feee4eb4638828373955d
+      internalID: 1452300865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_17
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 962
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52738eb22c91664491e6c78e6506ed0
+      internalID: 1110534778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_18
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 960
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d770b8fb23d0b7f4784d9d15c009f603
+      internalID: 1451061444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_19
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 962
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400e0b494b50cda42a03b8d738112af3
+      internalID: 1461328953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_20
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 933
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f926a0a43d6c8e4bb977b8a9d9c355c
+      internalID: -1525398944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_21
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 934
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ba3f5f3be14e5439177d037b6f1bc3
+      internalID: -1479509734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_22
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 934
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197aaccb765572f488480d07ad9e21b8
+      internalID: 1848689768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_23
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 944
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4aa4f61a43e4746b62f74d62166153
+      internalID: 459828807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_24
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 932
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8695b62a8cee3184cae4d0eafa47bd76
+      internalID: -1814065005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_25
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 942
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3364778ec8e13744b7af8c3a5fb94ea
+      internalID: 1824879308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_26
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 931
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd2c0fe788ebfe42addefb631348bec
+      internalID: 646745570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_27
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 930
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92283d50520fe3a4dad44bfbda24a919
+      internalID: 1317542548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_28
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 900
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59085ece6d47dae4e95f17e68ca2545b
+      internalID: -1402804471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_29
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 902
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3352ca68825c75b45a8a421c50c02840
+      internalID: 1443780635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_30
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 899
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27ae8a643a428c4b98ee9d0d53eb432
+      internalID: 1016645033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_31
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 898
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8fd8bffa4385c4e973b48902d60cd6
+      internalID: 444100995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_32
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 900
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548bcc40b0ee7174b9efc1dd6ca49efa
+      internalID: 1245666819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_33
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 905
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d885382086eb14d88ff01c9f9864da
+      internalID: -1059885817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_34
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 902
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d01ea8b2064e5c40b32d45f610897ad
+      internalID: 1841436793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_35
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 905
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36410ce237bdda4ca41ecec678ffb4c
+      internalID: 459704330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_36
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 904
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286e3aaea4e8f3540a3f34c8e7677716
+      internalID: 398309390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_37
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 902
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702e241ac9b66d74b94765f62c0b4a3f
+      internalID: -598419646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_38
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 836
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d89555d0f408b4fadbfe44adced3dd
+      internalID: 1179708681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_39
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 836
+        width: 22
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9eb82f93f9fce4c92a8af3c1e50610
+      internalID: 81688583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_42
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 833
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f7f6d81882260429102a82e6369e1b
+      internalID: 262967461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 864
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a9a02a0d51f164ea7d60e1e90a48ec
+      internalID: -390517526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_44
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 864
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844e674a618e33f49a900ba7b55673ff
+      internalID: -1572772328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_45
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 800
+        width: 31
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673813867cc4d9741b4426bc1edb0d13
+      internalID: -1030735835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_46
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 768
+        width: 62
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f867274a596b84fa6162bd17e287a9
+      internalID: -266444780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_47
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 768
+        width: 62
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23549b5f933baa45be0d52fcf2ffc21
+      internalID: -1948763779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_48
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 807
+        width: 58
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad88ab1012d36c14da2ca9d6d45b7917
+      internalID: 1045585215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_49
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 807
+        width: 58
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5823d93f5982194e836f04244eb85a3
+      internalID: -761250165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_50
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 834
+        width: 59
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f47ab8a8b2f2e9409f78d51038542c8
+      internalID: 1867527847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_51
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 832
+        width: 62
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73665cb5db08dcd41b7378b043f6f9a8
+      internalID: 1308022583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_52
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 801
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a3902c6244880489eb26ddbcc10634
+      internalID: -1329546463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_53
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 768
+        width: 31
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474e0fe2678cadd49b8d8a17f8640c88
+      internalID: 1138321080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_54
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 769
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8658946d12735bc4b987844614a940b9
+      internalID: -1432576585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_55
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 800
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207ad1344cb51944b9a4f57cc85a2c8e
+      internalID: -813889483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_56
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 800
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b50483a86ef7b74aa6f3dd77ca64421
+      internalID: 1129973463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_57
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 781
+        width: 56
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04297acb6662d3145b6bf14ab1f3fac2
+      internalID: 1774755588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_58
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 768
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913291d4a9eabce4488068f698b7d283
+      internalID: 161344738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_59
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 640
+        width: 192
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e52ba334822557d4d9515795040dcd9c
+      internalID: 262946511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_60
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 768
+        width: 95
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b871510fa318340af8cc5dc9d00dec
+      internalID: -945453244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_61
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 641
+        width: 83
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4bcb12b28768940a08b5868d50943b
+      internalID: 874196754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_62
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 644
+        width: 83
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f5915d3168b4c43a3703216cc2d016
+      internalID: -252260260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_63
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 595
+        width: 91
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5dd4134b1e46b4c9afa2a1d8f68e0c
+      internalID: 64141677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_64
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 595
+        width: 91
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad92e1e7060472e47b47f04051f60673
+      internalID: 1286470604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_65
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 391
+        width: 101
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ab3025654c45647b91c2ecfea57e09
+      internalID: 1102639232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_66
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 96
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4760229804163c64da62875737f83778
+      internalID: 731485526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_67
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 355
+        width: 94
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21d94c3d22e5fc43a37c60bdb308a70
+      internalID: 1112729821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_68
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 416
+        width: 128
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3bebc31db259d4fad6a44ac8849ab6
+      internalID: 1307164454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_69
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 384
+        width: 96
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8bb8643dc144c4d9adf32e70a9ae59
+      internalID: -1991278319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_70
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 280
+        width: 89
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e502638f9e6af2f4e91fb96d27a8411e
+      internalID: -1297296981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_71
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 384
+        width: 47
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef44254e43fc983459bab6209600c278
+      internalID: 1895527898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_72
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 279
+        width: 60
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a09daf93790a0f40aa9b9afc753bf69
+      internalID: 426641891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_73
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 328
+        width: 80
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0245b2bb6babe499ed76aba0a0cff9
+      internalID: -363413198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_74
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 352
+        width: 47
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed570b8444120b49b11275657bad706
+      internalID: 342207774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_75
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 256
+        width: 90
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48dbc8ae5aac424a8a06d84756dd315
+      internalID: 1914861703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_76
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 325
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5869e5ca9275f824eb86fe0db5b954d0
+      internalID: 464371237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_77
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 324
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a7fbc845b650d4894d76735f342d7f
+      internalID: 1682758618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_78
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 325
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02ae076cba955a47b3d61fb00af04aa
+      internalID: 930943793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_79
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 320
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0a019bf5e94924a9ed6bde9506a0d2
+      internalID: 1088303632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_80
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 320
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c1dfc9d34456d4cb472ad0bbd56408
+      internalID: 466708284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_81
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 256
+        width: 89
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e220654336011904d8d49e3a689ca021
+      internalID: 618738698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_82
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 260
+        width: 89
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6990a0179b580034eb16ed38b203aecb
+      internalID: 192131754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_83
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 275
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e958e0e4669d34f800ba2d8adb1d6e
+      internalID: 1586483853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_84
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 276
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b45261899045f4bb521ed8a907f8b7
+      internalID: 271741249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_85
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 272
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cd6419643745249b808891aacd9c4b
+      internalID: -1524730089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_86
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 258
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818ce449f5b026e4f9d882a7e62d3ba4
+      internalID: -1493924422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_87
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 63
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371866ffbc19ed24d8232bced92baefc
+      internalID: -337988112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_88
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 256
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55972b6d74ef32148ae373d0de7a09a9
+      internalID: -1853731757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_89
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 256
+        width: 27
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1069f3a830d969f4f8a3ba9f0455e36e
+      internalID: 581316517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_90
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 260
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eccdbba484369f478d7c3ad6a5aa782
+      internalID: 1535513421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_91
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 266
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b32bb929b8181c4a9b91ab8f31c5e38
+      internalID: -732095133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_92
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 192
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c4b953a97796a4cafc57fc043dc0ff
+      internalID: 1639851867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_93
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 164
+        width: 96
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec23048e99fd024b8cb82a899559d9b
+      internalID: 2070645755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_94
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 192
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c192255af7ee22f4dbdfaf17f2bb6eee
+      internalID: 2025837677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_95
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 192
+        width: 63
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5726665186205d3499cfa2314831a9eb
+      internalID: -983329240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_96
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 175
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7e0585e6a8c4141b294fd184a429a7
+      internalID: -1240370793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_97
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 175
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b74856aa28446d4d972dcc686a0ca82
+      internalID: -2097298216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_98
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 163
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107148107df22aa409e90de4b3f4b813
+      internalID: -993300447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_99
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 163
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3973724674fecd1479933a72a103beb1
+      internalID: 1425179553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_100
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 130
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eaa1b23ef77b794b83d8641a422d721
+      internalID: -1528304098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_101
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 142
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35079db25c8de354b828cdde9ce10157
+      internalID: -1023604732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_102
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 142
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59694c9354de9234d82c0b957c3f8a1f
+      internalID: -384406414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_103
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 131
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e916bf20132155048814a735888446a4
+      internalID: -1297487121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_104
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 130
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05be227d2bcb7d4e99bb28ce7154c36
+      internalID: -1166698020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_40
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 835
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4debdded08059e42b3581e6d08eb2ee
+      internalID: -79100818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_105
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 768
+        width: 32
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c36b513022d09543ac09a2b8f181a65
+      internalID: -666389857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_41
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 833
+        width: 31
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8119005cc4930449b19a08aff32049
+      internalID: -613981349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beach-desert_106
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 770
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a74b4205ac8cbd478ba17dbe0155c5b
+      internalID: -60230920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      beach-desert_46: -266444780
+      beach-desert_103: -1297487121
+      beach-desert_7: 1470913457
+      beach-desert_32: 1245666819
+      beach-desert_105: -666389857
+      beach-desert_56: 1129973463
+      beach-desert_91: -732095133
+      beach-desert_94: 2025837677
+      beach-desert_102: -384406414
+      beach-desert_83: 1586483853
+      beach-desert_21: -1479509734
+      beach-desert_52: -1329546463
+      beach-desert_89: 581316517
+      beach-desert_45: -1030735835
+      beach-desert_49: -761250165
+      beach-desert_9: -1187696177
+      beach-desert_57: 1774755588
+      beach-desert_79: 1088303632
+      beach-desert_55: -813889483
+      beach-desert_14: -1518877651
+      beach-desert_82: 192131754
+      beach-desert_44: -1572772328
+      beach-desert_106: -60230920
+      beach-desert_8: 278229837
+      beach-desert_58: 161344738
+      beach-desert_85: -1524730089
+      beach-desert_67: 1112729821
+      beach-desert_37: -598419646
+      beach-desert_62: -252260260
+      beach-desert_36: 398309390
+      beach-desert_6: 884717374
+      beach-desert_31: 444100995
+      beach-desert_76: 464371237
+      beach-desert_42: 262967461
+      beach-desert_96: -1240370793
+      beach-desert_11: 1683586805
+      beach-desert_70: -1297296981
+      beach-desert_68: 1307164454
+      beach-desert_1: 858297978
+      beach-desert_100: -1528304098
+      beach-desert_80: 466708284
+      beach-desert_41: -613981349
+      beach-desert_30: 1016645033
+      beach-desert_65: 1102639232
+      beach-desert_43: -390517526
+      beach-desert_22: 1848689768
+      beach-desert_90: 1535513421
+      beach-desert_63: 64141677
+      beach-desert_35: 459704330
+      beach-desert_69: -1991278319
+      beach-desert_47: -1948763779
+      beach-desert_59: 262946511
+      beach-desert_98: -993300447
+      beach-desert_19: 1461328953
+      beach-desert_51: 1308022583
+      beach-desert_4: 1964435344
+      beach-desert_50: 1867527847
+      beach-desert_26: 646745570
+      beach-desert_23: 459828807
+      beach-desert_39: 81688583
+      beach-desert_66: 731485526
+      beach-desert_81: 618738698
+      beach-desert_97: -2097298216
+      beach-desert_99: 1425179553
+      beach-desert_17: 1110534778
+      beach-desert_33: -1059885817
+      beach-desert_24: -1814065005
+      beach-desert_92: 1639851867
+      beach-desert_48: 1045585215
+      beach-desert_64: 1286470604
+      beach-desert_28: -1402804471
+      beach-desert_72: 426641891
+      beach-desert_104: -1166698020
+      beach-desert_95: -983329240
+      beach-desert_54: -1432576585
+      beach-desert_101: -1023604732
+      beach-desert_73: -363413198
+      beach-desert_87: -337988112
+      beach-desert_27: 1317542548
+      beach-desert_40: -79100818
+      beach-desert_60: -945453244
+      beach-desert_10: 1168379837
+      beach-desert_77: 1682758618
+      beach-desert_18: 1451061444
+      beach-desert_20: -1525398944
+      beach-desert_84: 271741249
+      beach-desert_53: 1138321080
+      beach-desert_74: 342207774
+      beach-desert_38: 1179708681
+      beach-desert_15: 916467120
+      beach-desert_16: 1452300865
+      beach-desert_78: 930943793
+      beach-desert_3: 77139590
+      beach-desert_0: 874961554
+      beach-desert_13: 1089020663
+      beach-desert_2: 1314076397
+      beach-desert_61: 874196754
+      beach-desert_29: 1443780635
+      beach-desert_93: 2070645755
+      beach-desert_25: 1824879308
+      beach-desert_86: -1493924422
+      beach-desert_88: -1853731757
+      beach-desert_34: 1841436793
+      beach-desert_5: -1765863605
+      beach-desert_12: 2113089995
+      beach-desert_75: 1914861703
+      beach-desert_71: 1895527898
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

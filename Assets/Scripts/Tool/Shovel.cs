@@ -8,6 +8,7 @@ public class Shovel : CropTool
     private Plant _storedPlant = null;
 
     protected override void UseTool() { }
+    public override ToolType Type => ToolType.Shovel;
 
     public override void UseTool(CropCell crop)
     {

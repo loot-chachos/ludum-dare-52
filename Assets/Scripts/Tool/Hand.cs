@@ -82,15 +82,18 @@ public class Hand : MonoBehaviour
             {
                 if (colliders[i].TryGetComponent(out Tool tool))
                 {
+                    GameManager.Instance.AudioManager.PlayTool(tool.Type);
                     tool.ClickTool();
                     return;
                 }
                 else if (colliders[i].TryGetComponent(out CropCell cell))
                 {
+                    GameManager.Instance.AudioManager.PlayHarvest();
                     cell.Harvest();
                 }
                 else if (colliders[i].TryGetComponent(out Animal animal))
                 {
+                    GameManager.Instance.AudioManager.PlayShoot();
                     animal.Kill();
                 }
             }

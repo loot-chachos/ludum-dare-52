@@ -49,11 +49,12 @@ MonoBehaviour:
   _speech:
   - "\xA1 Hola Amigo !"
   - Long time no see.
-  - I was sure you will come back to take care of your garden with all that chaos
-    happening.
+  - I was sure you will come back to take care of your garden
+  - with all that chaos happening..
   - I'm sure you remember how the job is done back when we were growing <i>melocoton</i>
   - Watered often, and wait a bit before harvesting your plants
-  - Animals are really hungry back here. You might want to use those seed to feed
-    them but I'm not sure it will be enough
+  - but I'm not sure it will be enough...
+  - Animals are really hungry back here.
+  - You might want to use those animal food on the left to feed them.
   - Also, there is a bit of fertilizer. Not sure where it comes from...
   - Good luck amigo. And let's have a couple chupitos together when you're available.

@@ -14,13 +14,14 @@ public class Plant
     public float TimeSpentAlive { get; internal set; }
     public int WateredCount { get; internal set; }
     public int HarvestCount { get; internal set; }
-    public int FertilizeCount { get; internal set; }
+    public float FertilizeCount { get; internal set; }
     public int StoleByAnimalsCount { get; internal set; }
     public PlantEvolution CurrentEvolution => _parameters.Evolutions[(int)(State)];
     public SpriteRenderer PlantSpriteRenderer { get; internal set; }
-    #endregion Runtime variables
+	public PlantParameters Parameters { get => _parameters; }
+	#endregion Runtime variables
 
-    public Plant(PlantParameters plantParameters)
+	public Plant(PlantParameters plantParameters)
     {
         State = PlantState.Underground;
         TimeSpentAlive = 0.0F;

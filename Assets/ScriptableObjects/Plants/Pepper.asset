@@ -45,3 +45,4 @@ MonoBehaviour:
     _wateredNeedToEvolve: 0
     _stolenCountToEvolve: 2
   _growSpeed: 1
+  FertilizeMultiplierPerSeconds: 0.3

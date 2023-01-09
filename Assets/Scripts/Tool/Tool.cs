@@ -4,12 +4,21 @@ using UnityEngine;
 
 public abstract class Tool : MonoBehaviour
 {
-    private bool _isGrab = false;
+    public enum ToolType
+    {
+        Shovel,
+        Others
+    }
 
+    [SerializeField] private float _finalAngle = 0.0F;
+    [SerializeField] private float _rotationSpeed = 0.0F;
+    private bool _isGrab = false;
     private Vector2 _startPosition = Vector2.zero;
 
     public bool IsGrab { get => _isGrab; }
-
+    public float FinalAngle { get => _finalAngle; }
+    public float RotationSpeed { get => _rotationSpeed; }
+    public virtual ToolType Type => ToolType.Others;
     protected void Start()
     {
         _startPosition = transform.position;
@@ -41,7 +50,7 @@ public abstract class Tool : MonoBehaviour
 
     protected virtual void UseTool()
     {
-        ReturnToStartPos();
+        //ReturnToStartPos();
     }
 
     protected void ReturnToStartPos()
@@ -49,5 +58,6 @@ public abstract class Tool : MonoBehaviour
         GameManager.Instance.Hand.GrabTool(null);
         _isGrab = false;
         transform.position = _startPosition;
+        transform.eulerAngles.Set(transform.eulerAngles.x, transform.eulerAngles.y, 0.0F);
     }
 }

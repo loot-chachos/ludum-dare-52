@@ -9,6 +9,7 @@ public class DraggableTool<T> : Tool
 
     private bool _isActive = false;
     private float _timer = 0.0f;
+    private float _currentZEulerAngles;
 
     public bool IsActive { get { return _isActive; } }
 
@@ -16,6 +17,8 @@ public class DraggableTool<T> : Tool
     {
         if (IsGrab)
         {
+            RotateTool();
+
             if (_isDurationDriven)
             {
                 _timer += Time.deltaTime;
@@ -37,6 +40,8 @@ public class DraggableTool<T> : Tool
             else if (Input.GetMouseButtonUp(0))
             {
                 _isActive = false;
+                // Reset rotation
+                transform.eulerAngles.Set(transform.eulerAngles.x, transform.eulerAngles.y, 0.0F);
             }
         }
     }
@@ -49,7 +54,17 @@ public class DraggableTool<T> : Tool
         }
     }
 
-    protected virtual void Action(T seed) { }
+    protected virtual void Action(T seed){ }
+
+    private void RotateTool()
+    {
+        if (transform.eulerAngles.z != FinalAngle)
+        {
+            _currentZEulerAngles += Time.deltaTime * RotationSpeed;
+            transform.eulerAngles.Set(transform.eulerAngles.x, transform.eulerAngles.y, _currentZEulerAngles);
+        }
+        
+    }
 
     protected void Activated()
     {
