@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1765c687766468449800cfce1577462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _finalAngle: 90
+  _rotationSpeed: 2
   _isDurationDriven: 0
   _maxHoldDuration: 1
 --- !u!1 &483606439807287861
@@ -192,6 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8377b82566668f148bc745299d7f5845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _finalAngle: 90
+  _rotationSpeed: 2
   _isDurationDriven: 0
   _maxHoldDuration: 1
 --- !u!1 &898217365582840052
@@ -1468,6 +1472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4f5c063100b4f4caa5cd0d461023cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _finalAngle: 90
+  _rotationSpeed: 2
   _isDurationDriven: 0
   _maxHoldDuration: 1
 --- !u!1 &4912913734847079175
@@ -1920,6 +1926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54558eb6336528649866c6ba43c9eada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _finalAngle: 90
+  _rotationSpeed: 2
 --- !u!1 &7495061874667252163
 GameObject:
   m_ObjectHideFlags: 0

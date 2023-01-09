@@ -24,7 +24,7 @@ public class Shovel : CropTool
                 _storedCell.Bury(_storedPlant);
             }
             _storedCell = null;
-            ReturnToStartPos();
+            //ReturnToStartPos();
         }
         else
         {
