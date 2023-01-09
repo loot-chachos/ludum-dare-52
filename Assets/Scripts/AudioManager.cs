@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
 
     private List<AudioSource> _audioPool = null;
 
+    private float _timer = 0.0f;
 
     public void Awake()
     {
@@ -90,6 +91,13 @@ public class AudioManager : MonoBehaviour
 
     public void PlayTool(ToolType type)
     {
+        _timer += Time.deltaTime;
+        if (_timer <= 0.10f)
+        {
+            return;
+        }
+
+        _timer = 0.0f;
         switch (type)
         {
             case ToolType.Seed:
