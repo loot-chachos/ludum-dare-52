@@ -34,13 +34,18 @@ public class DraggableTool<T> : Tool
             else if (Input.GetMouseButtonDown(0))
             {
                 Activated();
-                RotateTool();
             }
             else if (Input.GetMouseButtonUp(0))
             {
                 _isActive = false;
                 // Reset rotation
                 ResetRotation();
+            }
+
+            if (_isActive)
+            {
+                RotateTool();
+                PlayParticle();
             }
         }
     }
@@ -66,7 +71,11 @@ public class DraggableTool<T> : Tool
             transform.Rotate(Vector3.forward, _currentZEulerAngles);
             //transform.eulerAngles.Set(transform.eulerAngles.x, transform.eulerAngles.y, _currentZEulerAngles);
         }
-        
+    }
+
+    private void PlayParticle()
+    {
+        _particle?.Play();
     }
 
     protected void Activated()

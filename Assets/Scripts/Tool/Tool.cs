@@ -12,6 +12,7 @@ public abstract class Tool : MonoBehaviour
 
     [SerializeField] private float _finalAngle = 0.0F;
     [SerializeField] private float _rotationSpeed = 0.0F;
+    [SerializeField] protected ParticleSystem _particle = null;
     private bool _isGrab = false;
     private Vector2 _startPosition = Vector2.zero;
 
@@ -63,6 +64,7 @@ public abstract class Tool : MonoBehaviour
 
     protected void ResetRotation()
     {
+        _particle?.Stop();
         transform.rotation = Quaternion.identity;
     }
 }

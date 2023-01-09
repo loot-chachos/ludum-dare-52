@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _finalAngle: 90
   _rotationSpeed: 2
+  _particle: {fileID: 5412942026410082134, guid: 958005ccf81035b4986dcd23565a5f28, type: 3}
   _isDurationDriven: 0
   _maxHoldDuration: 1
 --- !u!1 &483606439807287861
@@ -196,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _finalAngle: 90
   _rotationSpeed: 2
+  _particle: {fileID: 5412942026410082134, guid: 5512e1fe715d9354b9912994d143c599, type: 3}
   _isDurationDriven: 0
   _maxHoldDuration: 1
 --- !u!1 &898217365582840052
@@ -1474,6 +1476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _finalAngle: 90
   _rotationSpeed: 2
+  _particle: {fileID: 0}
   _isDurationDriven: 0
   _maxHoldDuration: 1
 --- !u!1 &4912913734847079175
@@ -1928,6 +1931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _finalAngle: 90
   _rotationSpeed: 2
+  _particle: {fileID: 0}
 --- !u!1 &7495061874667252163
 GameObject:
   m_ObjectHideFlags: 0
