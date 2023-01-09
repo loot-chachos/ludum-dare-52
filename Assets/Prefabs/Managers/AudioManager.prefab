@@ -51,8 +51,11 @@ MonoBehaviour:
   _dialogMusic: {fileID: 8300000, guid: 803b8bceae26bfd4d90f79db2ec2030f, type: 3}
   _inGameMusic: {fileID: 8300000, guid: cd64928d856030c40b953130ef4ebf8f, type: 3}
   _shootSound: {fileID: 8300000, guid: ec9ca3afba6f22a46b662b09322c0415, type: 3}
-  _watered1Sound: {fileID: 8300000, guid: 5c5cf413f6de4444fb40aba1712d3869, type: 3}
-  _watered2Sound: {fileID: 8300000, guid: d81e60f152eff794bbf462f6d611ab9d, type: 3}
+  _harvest: {fileID: 8300000, guid: 2d946f5a5a08b9641ac3ef35ad0bb761, type: 3}
+  _water: {fileID: 8300000, guid: d81e60f152eff794bbf462f6d611ab9d, type: 3}
+  _fertilze: {fileID: 8300000, guid: 9b65f3f5955f711459dcdbcc6c73cd1e, type: 3}
+  _seed: {fileID: 8300000, guid: 0f1e8fe2e1755454c868f8539c5390c0, type: 3}
+  _shovel: {fileID: 8300000, guid: f1de2292e94941247b7a62593f2142b2, type: 3}
 --- !u!82 &2513076078983206500
 AudioSource:
   m_ObjectHideFlags: 0

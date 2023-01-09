@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Fertilizer : DraggableTool<CropCell>
 {
+    public override ToolType Type => ToolType.Fertilzer;
     public Type type { get { return typeof(CropCell); } }
 
     protected override void UseTool() { }

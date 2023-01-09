@@ -16,8 +16,11 @@ public class AudioManager : MonoBehaviour
 
     [Header("SFX")]
     [SerializeField] private AudioClip _shootSound = null;
-    [SerializeField] private AudioClip _watered1Sound = null;
-    [SerializeField] private AudioClip _watered2Sound = null;
+    [SerializeField] private AudioClip _harvest = null;
+    [SerializeField] private AudioClip _water = null;
+    [SerializeField] private AudioClip _fertilze = null;
+    [SerializeField] private AudioClip _seed = null;
+    [SerializeField] private AudioClip _shovel = null;
 
     private List<AudioSource> _audioPool = null;
 
@@ -82,19 +85,39 @@ public class AudioManager : MonoBehaviour
     public void PlayHarvest()
     {
         AudioSource source = GetAvailableAudioSource();
-        source.PlayOneShot(_watered1Sound);
+        source.PlayOneShot(_harvest);
     }
 
     public void PlayTool(ToolType type)
     {
-        if (type == ToolType.Others)
+        switch (type)
         {
-            AudioSource source = GetAvailableAudioSource();
-            source.PlayOneShot(_watered2Sound);
-        }
-        else
-        {
-
+            case ToolType.Seed:
+                {
+                    AudioSource source = GetAvailableAudioSource();
+                    source.PlayOneShot(_seed);
+                }
+                break;
+            case ToolType.Water:
+                {
+                    AudioSource source = GetAvailableAudioSource();
+                    source.PlayOneShot(_water);
+                }
+                break;
+            case ToolType.Fertilzer:
+                {
+                    AudioSource source = GetAvailableAudioSource();
+                    source.PlayOneShot(_fertilze);
+                }
+                break;
+            case ToolType.Shovel:
+                {
+                    AudioSource source = GetAvailableAudioSource();
+                    source.PlayOneShot(_shovel);
+                }
+                break;
+            case ToolType.Others:
+                break;
         }
     }
     #endregion Sounds

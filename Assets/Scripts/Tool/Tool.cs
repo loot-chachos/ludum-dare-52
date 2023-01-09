@@ -6,6 +6,9 @@ public abstract class Tool : MonoBehaviour
 {
     public enum ToolType
     {
+        Seed,
+        Water,
+        Fertilzer,
         Shovel,
         Others
     }
