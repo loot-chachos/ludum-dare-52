@@ -64,7 +64,10 @@ public abstract class Tool : MonoBehaviour
 
     protected void ResetRotation()
     {
-        _particle?.Stop();
+        if (_particle != null)
+        {
+            _particle?.Stop();
+        }
         transform.rotation = Quaternion.identity;
     }
 }

@@ -75,7 +75,10 @@ public class DraggableTool<T> : Tool
 
     private void PlayParticle()
     {
-        _particle?.Play();
+        if (_particle != null)
+        {
+            _particle?.Play();
+        }
     }
 
     protected void Activated()
