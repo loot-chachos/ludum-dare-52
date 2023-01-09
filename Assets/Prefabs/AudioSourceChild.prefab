@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &219022178101389779
+--- !u!1 &5068084004930204605
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,66 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6289385882106989915}
-  - component: {fileID: -2494722595986447443}
-  - component: {fileID: 2513076078983206500}
+  - component: {fileID: 3783592420025402057}
+  - component: {fileID: 719498443402595512}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: AudioSourceChild
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6289385882106989915
+--- !u!4 &3783592420025402057
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219022178101389779}
+  m_GameObject: {fileID: 5068084004930204605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.0428605, y: -27.21902, z: -0.030032601}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2494722595986447443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219022178101389779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f6dca95cfe58c46b21535bae7ae51a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _musicAudioSource: {fileID: 2513076078983206500}
-  _sourcePrefab: {fileID: 5068084004930204605, guid: aefb3ac4cd8fa294aa4218a42c2120d5, type: 3}
-  _mainMenuMusic: {fileID: 8300000, guid: 4dbc369fe8b212e459bbaf4d543712e0, type: 3}
-  _dialogMusic: {fileID: 8300000, guid: 803b8bceae26bfd4d90f79db2ec2030f, type: 3}
-  _inGameMusic: {fileID: 8300000, guid: cd64928d856030c40b953130ef4ebf8f, type: 3}
-  _shootSound: {fileID: 8300000, guid: ec9ca3afba6f22a46b662b09322c0415, type: 3}
-  _watered1Sound: {fileID: 8300000, guid: 5c5cf413f6de4444fb40aba1712d3869, type: 3}
-  _watered2Sound: {fileID: 8300000, guid: d81e60f152eff794bbf462f6d611ab9d, type: 3}
---- !u!82 &2513076078983206500
+--- !u!82 &719498443402595512
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219022178101389779}
+  m_GameObject: {fileID: 5068084004930204605}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
