@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 5
   MoneyReward: 15
-  WorldPercentEvolution: 5
+  WorldPercentEvolution: 2
   CanEat: 1

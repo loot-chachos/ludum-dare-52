@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TumbleweedMovementParameters
   m_EditorClassIdentifier: 
   Speed: 6
-  MoneyReward: 0
+  MoneyReward: 1
   WorldPercentEvolution: 0
   CanEat: 0
