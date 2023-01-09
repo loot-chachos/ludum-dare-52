@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ScoreManager _scoreManager = null;
     [SerializeField] private WorldEvolutionManager _worldEvolutionManager = null;
     [SerializeField] private AnimalsSpawner _animalSpawner = null;
+    [SerializeField] private DialogManager _dialogManager = null;
 
     [Header("Others")]
     [SerializeField] private Vector3 _gameViewPosition = Vector3.zero;
@@ -76,7 +77,7 @@ public class GameManager : MonoBehaviour
     public void Update()
     {
 #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             StartGame();
         }
@@ -121,6 +122,12 @@ public class GameManager : MonoBehaviour
         // HUD
         _scoreManager.Show();
 
+        _dialogManager.DialogFinished += OnDialogFinished;
+        _dialogManager.Show();
+    }
+
+    public void OnDialogFinished()
+    {
         // Others
         _animalSpawner.OnStartGame();
 
