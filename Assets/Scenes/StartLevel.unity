@@ -820,7 +820,7 @@ PrefabInstance:
       objectReference: {fileID: 938399532}
     - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: _speech.Array.size
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: _speech.Array.data[0]
@@ -842,19 +842,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: _speech.Array.data[4]
-      value: Watered often, and wait a bit before harvesting your plants
+      value: Use water, and wait a bit before harvesting your plants
       objectReference: {fileID: 0}
     - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: _speech.Array.data[5]
-      value: Animals are really hungry back here. You might want to use those seed
-        to feed them but I'm not sure it will be enough
+      value: 'Animals are really hungry back here. '
       objectReference: {fileID: 0}
     - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: _speech.Array.data[6]
-      value: Also, there is a bit of fertilizer. Not sure where it comes from...
+      value: 'You might want to use those seed at the right to feed them. '
       objectReference: {fileID: 0}
     - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
       propertyPath: _speech.Array.data[7]
+      value: But I'm not sure it will be enough....
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: _speech.Array.data[8]
+      value: Also, there is a bit of fertilizer. Not sure where it comes from...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757238209658495810, guid: 0c4f877bb200f3e42bd2d5a368ee6ed1, type: 3}
+      propertyPath: _speech.Array.data[9]
       value: Good luck amigo. And let's have a couple chupitos together when you're
         available.
       objectReference: {fileID: 0}
