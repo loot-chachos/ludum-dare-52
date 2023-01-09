@@ -40,4 +40,12 @@ public class Shovel : CropTool
             }
         }
     }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            ReturnToStartPos();
+        }
+    }
 }
