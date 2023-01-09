@@ -82,7 +82,6 @@ public class Hand : MonoBehaviour
             {
                 if (colliders[i].TryGetComponent(out Tool tool))
                 {
-                    GameManager.Instance.AudioManager.PlayTool(tool.Type);
                     tool.ClickTool();
                     return;
                 }

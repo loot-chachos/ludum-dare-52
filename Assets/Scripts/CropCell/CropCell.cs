@@ -290,8 +290,8 @@ public class CropCell : MonoBehaviour, IEatable
             return;
         }
 
-        _hostedPlant.FertilizeCount+=Time.deltaTime * _hostedPlant.Parameters.FertilizeMultiplierPerSeconds;
-        GameManager.Instance.WorldEvolutionManager.OnUseFertilizer(Time.deltaTime);
+        _hostedPlant.FertilizeCount+=_hostedPlant.Parameters.FertilizeMultiplierPerSeconds;
+        GameManager.Instance.WorldEvolutionManager.OnUseFertilizer(1);
 
         if (_isFertilize != null)
         {

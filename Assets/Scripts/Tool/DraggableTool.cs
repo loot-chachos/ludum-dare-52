@@ -31,7 +31,7 @@ public class DraggableTool<T> : Tool
             {
                 ReturnToStartPos();
             }
-            else if (Input.GetMouseButton(0))
+            else if (Input.GetMouseButtonDown(0))
             {
                 Activated();
                 RotateTool();
@@ -53,7 +53,10 @@ public class DraggableTool<T> : Tool
         }
     }
 
-    protected virtual void Action(T seed){ }
+    protected virtual void Action(T seed)
+    {
+        GameManager.Instance.AudioManager.PlayTool(Type);
+    }
 
     private void RotateTool()
     {
@@ -79,6 +82,5 @@ public class DraggableTool<T> : Tool
                 Action(cell);
             }
         }
-
     }
 }

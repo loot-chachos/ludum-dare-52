@@ -11,6 +11,7 @@ public class Fertilizer : DraggableTool<CropCell>
 
     protected override void Action(CropCell crop)
     {
+        base.Action(crop);
         if (GameManager.Instance.HasStarted)
         {
             crop.Fertilize();

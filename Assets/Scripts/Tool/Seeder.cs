@@ -8,6 +8,7 @@ public class Seeder : DraggableTool<Seed>
 
     protected override void Action(Seed seed)
     {
+        base.Action(seed);
         seed.PlaceSeed();
     }
 }
