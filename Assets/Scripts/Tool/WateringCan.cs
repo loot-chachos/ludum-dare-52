@@ -8,6 +8,7 @@ public class WateringCan : DraggableTool<CropCell>
 
     protected override void Action(CropCell crop)
     {
+        base.Action(crop);
         // Play watering animation
         crop.Watered();
     }
